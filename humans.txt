@@ -1,15 +1,23 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+# GROUP
+	
+	Group L
+
+# PROJECT
+	
+	North South Community forum
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    @auishik
+    @asimuzzaman
+    @d34thgod 
 
 # THANKS
 
-    <name>
-
+    HTML5 Boilerplate
+ 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    PHP
+    Normalize.css

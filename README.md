@@ -1,4 +1,4 @@
-# nsu-ed
+# NSU‒ED
 Simple community forum for NSU
 ##About
 This is a simple project for a course on Database Management Systems(CSE 311). This project aims to demonstrate a database in action. It is a simple forum that allows students/faculties of a university to post questions, get help and help others about educational matters.
