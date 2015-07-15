@@ -1,4 +1,12 @@
 /**
+ ******************
+ * Temporary Import
+ ******************
+ */
+
+@import "normalize.css";
+
+/**
  *************
  * Base Styles
  *************
@@ -73,11 +81,11 @@ textarea {
  ****************
  */
 
-.hidden {
+.u-hidden {
     display: none !important;
 }
 
-.visuallyhidden {
+.u-visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -88,8 +96,8 @@ textarea {
     width: 1px;
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.u-visuallyhidden.u-focusable:active,
+.u-visuallyhidden.u-focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -98,17 +106,17 @@ textarea {
     width: auto;
 }
 
-.invisible {
+.u-invisible {
     visibility: hidden;
 }
 
-.clearfix:before,
-.clearfix:after {
+.u-clearfix:before,
+.u-clearfix:after {
     content: " ";
     display: table;
 }
 
-.clearfix:after {
+.u-clearfix:after {
     clear: both;
 }
 
