@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create Survey - NSU-ED</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/bts/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/bts/css/custom.css">
+    <!--[if lt IE 9]>
+	<script src="/bts/js/html5shiv.min.js"></script>
+	<script src="/bts/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body id="page_survey_format">
+  <nav class="navbar navbar-fixed-top navbar-inverse" id="topbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topbar_menu_collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button><!--navbar-toggle collapsed-->
+        <a class="navbar-brand" href="#">nsu-ed</a>
+      </div><!--/.navbar-header-->
+      <div id="topbar_menu_collapse" class="collapse navbar-collapse"><!--
+        <button type="button" class="btn btn-default navbar-btn navbar-right"><a class="display-block" href="#">Sign in</a></button>-->
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img class="img-rounded avatar avatar-navbar" src="/bts/img/avatar.jpg"> 
+              <span class="caret"></span>
+              <div class="btn-group visible-xs-inline-block navbar-right">
+                <button type="button" class="btn btn-success">
+                  <span class="badge">245</span><!--php here for number-->
+                  <span class="hidden-xxxs"> views</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-eye-open"></span>
+                </button>
+                <button type="button" class="btn btn-warning">
+                  <span class="badge">457</span><!--php here for number-->
+                  <span class="hidden-xxxs"> posts</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-flash"></span>
+                </button>
+                <button type="button" class="btn btn-info">
+                  <span class="badge">9</span><!--php here for number-->
+                  <span class="hidden-xxxs"> comments</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-comment"></span>
+                </button>
+                <button type="button" class="btn btn-danger hidden-xxs">
+                  <span class="badge">23</span><!--php here for number-->
+                  <span class="hidden-xxxs"> likes</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-heart"></span>
+                </button>
+              </div>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#"><span class="glyphicon glyphicon-user glyphicon-pad"></span> username</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="#"><span class="glyphicon glyphicon-globe glyphicon-pad"></span> notifications <span class="badge badge-leftpad badge-active">2</span></a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="#"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> messages <span class="badge badge-leftpad badge-active">6</span></a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="#"><span class="glyphicon glyphicon-wrench glyphicon-pad"></span> settings</a>
+              </li>
+              <li role="separator" class="divider"></li>
+              <li>
+                <a href="#"><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
+              </li>
+            </ul><!--dropdown-menu-->
+          </li><!--/.dropdown-->
+        </ul><!--/.navbar-nav-->
+        <form class="navbar-form navbar-search">
+        	<div class="form-group">
+          	<div class="form-group">
+            	<input type="text" class="form-control search-input" placeholder="type anything">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search hidden-xs"></span><span class="visible-xs-inline-block text-muted">Submit</span></button>
+        </form>
+      </div><!--/#topbar_menu_collapse-->
+    </div><!--/.container-->
+  </nav><!--/.navbar-->
+  <div class="container">
+    <h1 class="page-header"><span class="glyphicon glyphicon-sort-by-alphabet glyphicon-pad"></span> Survey Format</h1>
+    <div class="content-block">
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+      </ol>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="survey_mcq_no" class="col-sm-2 control-label">MCQ(s)</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="survey_mcq_no" min="1" placeholder="4">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="survey_option_no" class="col-sm-2 control-label">Options per MCQ</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="survey_option_no" min="2" placeholder="4">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+            </div>
+          </div>
+        </form>
+      </div><!--/.column-->
+    </div><!--/.row-->
+  </div><!--/.container-->
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footer_menu_collapse">
+            <span class="glyphicon glyphicon-heart glyphicon-ml text-primary"></span>
+          </button><!--navbar-toggle collapsed-->
+          <a class="navbar-brand" href="#">nsu-ed</a>
+        </div>
+        <div class="collapse navbar-collapse" id="footer_menu_collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">faq</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">toc</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+          <p class="navbar-text navbar-right">&copy; Copyright Lib 2015</p>
+        </div>
+      </nav><!--/.navbar-->
+    </div><!--/.container-->
+  </footer><!--/footer-->
+
+  <!--js scripts -->
+  <!--page unspecific-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="/bts/js/jquery-1.11.3.min.js"><\/script>')
+  </script>
+  <script type="text/javascript" src="/bts/js/bootstrap.min.js"></script>
+	<!--Init tabs - page specific-->
+  <script>
+  	$(function() {
+  		$('.nav-tabs a:first').tab('show')
+  	});
+  </script>
+</body>
+
+</html>
