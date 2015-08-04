@@ -4,29 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login - NSU-ED</title>
+    <title>Alert - NSU-ED</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/bts/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/bts/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!--[if lt IE 9]>
-	<script src="/bts/js/html5shiv.min.js"></script>
-	<script src="/bts/js/respond.min.js"></script>
+	<script src="/js/html5shiv.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 <![endif]-->
 </head>
 
-<body id="page_login">
+<body id="page_alert">
   <nav class="navbar navbar-fixed-top navbar-inverse" id="topbar">
     <div class="container">
-      <div class="navbar-header"><!--
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topbar_menu_collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>--><!--navbar-toggle collapsed-->
         <a class="navbar-brand" href="#">nsu-ed</a>
-      </div><!--/.navbar-header--><!--
+      </div><!--/.navbar-header-->
       <div id="topbar_menu_collapse" class="collapse navbar-collapse">
+        <button type="button" class="btn btn-default navbar-btn navbar-right"><a class="display-block" href="#">Sign in</a></button><!--
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -81,50 +82,22 @@
             </div>
           </div>
           <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search hidden-xs"></span><span class="visible-xs-inline-block text-muted">Submit</span></button>
-        </form>
-      </div>--><!--/#_topbar_menu_collapse-->
+        </form>-->
+      </div><!--/#topbar_menu_collapse-->
     </div><!--/.container-->
   </nav><!--/.navbar-->
   <div class="container">
-  	<div class="rows clearfix">
-  		<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-  			<!--login/signup tabs-->
-  			<ul class="nav nav-tabs">
-  				<li class="active"><a href="#sign_in" data-toggle="tab">Sign in</a></li>
-  				<li><a href="#sign_up" data-toggle="tab">Sign up</a></li>
-  			</ul><!--/.nav-tabs-->
-  			<!--tab data-->
-  			<div class="tab-content tab-bordered">
-  				<div class="tab-pane fade active in" id="sign_in">
-  					<form>
-  						<div class="form-group">
-    						<label for="username">Username</label>
-    						<input type="text" class="form-control" id="username" placeholder="username">
-  						</div>
-  						<div class="form-group">
-    						<label for="password">Password</label>
-    						<input type="password" class="form-control" id="password" placeholder="password">
-  						</div>
-  						<button type="submit" class="btn btn-primary">Submit</button>
-  					</form>
-  					<p class="bg-info errata sm-margin-top"><span class="glyphicon glyphicon-question-sign glyphicon-pad text-danger"></span> <a href="#">Forgot your password?</a> <a href="#">or username?</a></p>
-  				</div><!--#sign_in-->
-  				<div class="tab-pane fade" id="sign_up">
-  					<form>
-  						<div class="form-group">
-    						<label for="id">University ID</label>
-    						<input type="text" class="form-control" id="id" placeholder="identity number">
-  						</div>
-  						<div class="form-group">
-    						<label for="id_confirm">Confirm ID</label>
-    						<input type="text" class="form-control" id="id_confirm" placeholder="confirm identity number">
-  						</div>
-  						<button type="submit" class="btn btn-primary">Submit</button>
-  					</form>
-  				</div><!--#sign_up-->
-  			</div><!--/.tab-content ends-->
-  		</div><!--/.tab-->
-  	</div><!--/.row-->
+    <h1 class="page-header text-alert"><span class="glyphicon glyphicon-alert glyphicon-pad"></span> Alert!</h1>
+    <div class="row clearfix">
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+        <h2 class="text-center text-alert">Error during Sign In!</h2>
+        <h3 class="h1 text-center"><span class="glyphicon glyphicon-alert text-alert"></span></h3>
+        <p class="text-alert bg-alert errata">Te hinc laudem sea. Virtute fabellas mea no, et duis intellegam cum. Cu tota adhuc quo, dicit dolor nec an. Quando vocibus scribentur eam ex, cum ullum elitr principes ea. Ignota equidem id has, no quis molestiae eam, denique deseruisse nec id. Ne elaboraret adversarium mea.</p>
+        <h3 class="h1 text-center"><span class="glyphicon glyphicon-info-sign text-info"></span></h3>
+        <p class="text-info bg-info errata">In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready.</p>
+        <a href="#"><button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Go Back</button></a>
+      </div><!--/.column-->
+    </div><!--/.row-->
   </div><!--/.container-->
 
   <footer class="footer">
@@ -153,9 +126,9 @@
   <!--page unspecific-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
-  window.jQuery || document.write('<script src="/bts/js/jquery-1.11.3.min.js"><\/script>')
+  window.jQuery || document.write('<script src="/js/jquery-1.11.3.min.js"><\/script>')
   </script>
-  <script type="text/javascript" src="/bts/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<!--Init tabs - page specific-->
   <script>
   	$(function() {
