@@ -7,11 +7,11 @@
     <title>Login - NSU-ED</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/bts/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/bts/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!--[if lt IE 9]>
-	<script src="/bts/js/html5shiv.min.js"></script>
-	<script src="/bts/js/respond.min.js"></script>
+	<script src="/js/html5shiv.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 <![endif]-->
 </head>
 
@@ -153,9 +153,9 @@
   <!--page unspecific-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
-  window.jQuery || document.write('<script src="/bts/js/jquery-1.11.3.min.js"><\/script>')
+  window.jQuery || document.write('<script src="/js/jquery-1.11.3.min.js"><\/script>')
   </script>
-  <script type="text/javascript" src="/bts/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<!--Init tabs - page specific-->
   <script>
   	$(function() {
