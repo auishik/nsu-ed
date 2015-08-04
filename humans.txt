@@ -1,0 +1,23 @@
+# GROUP
+    
+    Group L
+
+# PROJECT
+    
+    North South Community forum
+
+# TEAM
+
+    @auishik
+    @asimuzzaman
+    @d34thgod 
+
+# THANKS
+
+    HTML5 Boilerplate
+ 
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    PHP
+    Normalize.css
