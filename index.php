@@ -24,13 +24,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>--><!--navbar-toggle collapsed-->
-        <a class="navbar-brand" href="#">nsu-ed</a>
+        <a class="navbar-brand" href="/home">nsu-ed</a>
       </div><!--/.navbar-header--><!--
       <div id="topbar_menu_collapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img class="img-rounded avatar avatar-navbar" src="http://placehold.it/40x36.gif"> 
+              <img class="img-rounded avatar avatar-navbar" src="http://placehold.it/40x36.gif">
               <span class="caret"></span>
               <div class="btn-group visible-xs-inline-block navbar-right">
                 <button type="button" class="btn btn-success">
@@ -107,7 +107,7 @@
   						</div>
   						<button type="submit" class="btn btn-primary">Submit</button>
   					</form>
-  					<p class="bg-info errata sm-margin-top"><span class="glyphicon glyphicon-question-sign glyphicon-pad text-danger"></span> <a href="#">Forgot your password?</a> <a href="#">or username?</a></p>
+  					<p class="bg-info errata sm-margin-top"><span class="glyphicon glyphicon-question-sign glyphicon-pad text-danger"></span> <a href="/checkpoint/<?php echo rawurlencode("account recovery.php"); ?>">Forgot your password?</a> </p>
   				</div><!--#sign_in-->
   				<div class="tab-pane fade" id="sign_up">
   					<form>
@@ -127,27 +127,7 @@
   	</div><!--/.row-->
   </div><!--/.container-->
 
-  <footer class="footer">
-    <div class="container">
-      <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footer_menu_collapse">
-            <span class="glyphicon glyphicon-heart glyphicon-ml text-primary"></span>
-          </button><!--navbar-toggle collapsed-->
-          <a class="navbar-brand" href="#">nsu-ed</a>
-        </div>
-        <div class="collapse navbar-collapse" id="footer_menu_collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">faq</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">toc</a></li>
-            <li><a href="#">about</a></li>
-          </ul>
-          <p class="navbar-text navbar-right">&copy; Copyright Lib 2015</p>
-        </div>
-      </nav><!--/.navbar-->
-    </div><!--/.container-->
-  </footer><!--/footer-->
+<?php require_once("includes/footer.php"); ?>
 
   <!--js scripts -->
   <!--page unspecific-->

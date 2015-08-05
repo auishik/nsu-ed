@@ -1,3 +1,8 @@
+<?php
+  require_once("../includes/head.php");
+  if($USERNAME==NULL) jump("/index.php");
+?>
+
 <!doctype html>
 <html lang="en-US">
 
@@ -16,75 +21,7 @@
 </head>
 
 <body id="page_profile">
-  <nav class="navbar navbar-fixed-top navbar-inverse" id="topbar">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topbar_menu_collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>--><!--navbar-toggle collapsed-->
-        <a class="navbar-brand" href="#">nsu-ed</a>
-      </div><!--/.navbar-header-->
-      <div id="topbar_menu_collapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img class="img-rounded avatar avatar-navbar" src="/img/avatar.jpg"> 
-              <span class="caret"></span>
-              <div class="btn-group visible-xs-inline-block navbar-right">
-                <button type="button" class="btn btn-success">
-                  <span class="badge">245</span><!--php here for number-->
-                  <span class="hidden-xxxs"> views</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-eye-open"></span>
-                </button>
-                <button type="button" class="btn btn-warning">
-                  <span class="badge">457</span><!--php here for number-->
-                  <span class="hidden-xxxs"> posts</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-flash"></span>
-                </button>
-                <button type="button" class="btn btn-info">
-                  <span class="badge">9</span><!--php here for number-->
-                  <span class="hidden-xxxs"> comments</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-comment"></span>
-                </button>
-                <button type="button" class="btn btn-danger hidden-xxs">
-                  <span class="badge">23</span><!--php here for number-->
-                  <span class="hidden-xxxs"> likes</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-heart"></span>
-                </button>
-              </div>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-user glyphicon-pad"></span> username</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-globe glyphicon-pad"></span> notifications <span class="badge badge-leftpad badge-active">2</span></a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> messages <span class="badge badge-leftpad badge-active">6</span></a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-wrench glyphicon-pad"></span> settings</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
-              </li>
-            </ul><!--dropdown-menu-->
-          </li><!--/.dropdown-->
-        </ul><!--/.navbar-nav-->
-        <form class="navbar-form navbar-search">
-          <div class="form-group">
-            <div class="form-group">
-              <input type="text" class="form-control search-input" placeholder="type anything">
-            </div>
-          </div>
-          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search hidden-xs"></span><span class="visible-xs-inline-block text-muted">Submit</span></button>
-        </form>
-      </div><!--/#topbar_menu_collapse-->
-    </div><!--/.container-->
-  </nav><!--/.navbar-->
+<?php require_once("../includes/header.php"); ?>
   <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-user glyphicon-pad"></span> Profile</h1>
     <div class="content-block">
@@ -105,7 +42,7 @@
         <div class="col-lg-12"><!--content-->
           <div class="row avatar-form">
             <div class="col-sm-2 col-lg-2 avatar-label">Avatar</div>
-            <div class="col-sm-10 col-lg-10 avatar-control"><img class="avatar img-rounded" src="/img/avatar.jpg"> 
+            <div class="col-sm-10 col-lg-10 avatar-control"><img class="avatar img-rounded" src="/img/avatar.jpg">
               <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#change_avatar"> <span class="glyphicon glyphicon-edit"></span> Change avatar</button>
             </div>
           </div>
@@ -167,7 +104,7 @@
           <p class="text-right"><a href="#">view as public</a></p>
         </div><!--/.col+content-->
       </div><!--/.col-->
-      
+
       <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 sidebar-offcanvas" id="sidebar">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -184,7 +121,7 @@
       <div class="col-lg-12 clearfix clear-both"></div>
     </div><!--/row-->
   </div><!--/.container-->
-  
+
   <!--#change_avatar-->
   <div class="modal fade" id="change_avatar">
     <div class="modal-dialog modal-sm">
@@ -212,27 +149,7 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footer_menu_collapse">
-            <span class="glyphicon glyphicon-heart glyphicon-ml text-primary"></span>
-          </button><!--navbar-toggle collapsed-->
-          <a class="navbar-brand" href="#">nsu-ed</a>
-        </div>
-        <div class="collapse navbar-collapse" id="footer_menu_collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">faq</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">toc</a></li>
-            <li><a href="#">about</a></li>
-          </ul>
-          <p class="navbar-text navbar-right">&copy; Copyright Lib 2015</p>
-        </div>
-      </nav><!--/.navbar-->
-    </div><!--/.container-->
-  </footer><!--/footer-->
+<?php require_once("../includes/footer.php"); ?>
 
   <!--js scripts -->
   <!--page unspecific-->

@@ -1,3 +1,8 @@
+<?php
+  require_once("../includes/head.php");
+  if($USERNAME==NULL) jump("/index.php");
+?>
+
 <!doctype html>
 <html lang="en-US">
 
@@ -16,75 +21,7 @@
 </head>
 
 <body id="page_survey">
-  <nav class="navbar navbar-fixed-top navbar-inverse" id="topbar">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topbar_menu_collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>--><!--navbar-toggle collapsed-->
-        <a class="navbar-brand" href="#">nsu-ed</a>
-      </div><!--/.navbar-header-->
-      <div id="topbar_menu_collapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img class="img-rounded avatar avatar-navbar" src="/img/avatar.jpg"> 
-              <span class="caret"></span>
-              <div class="btn-group visible-xs-inline-block navbar-right">
-                <button type="button" class="btn btn-success">
-                  <span class="badge">245</span><!--php here for number-->
-                  <span class="hidden-xxxs"> views</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-eye-open"></span>
-                </button>
-                <button type="button" class="btn btn-warning">
-                  <span class="badge">457</span><!--php here for number-->
-                  <span class="hidden-xxxs"> posts</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-flash"></span>
-                </button>
-                <button type="button" class="btn btn-info">
-                  <span class="badge">9</span><!--php here for number-->
-                  <span class="hidden-xxxs"> comments</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-comment"></span>
-                </button>
-                <button type="button" class="btn btn-danger hidden-xxs">
-                  <span class="badge">23</span><!--php here for number-->
-                  <span class="hidden-xxxs"> likes</span><span class="hidden-xs visible-xxxs-inline-block glyphicon glyphicon-heart"></span>
-                </button>
-              </div>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-user glyphicon-pad"></span> username</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-globe glyphicon-pad"></span> notifications <span class="badge badge-leftpad badge-active">2</span></a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> messages <span class="badge badge-leftpad badge-active">6</span></a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-wrench glyphicon-pad"></span> settings</a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a href="#"><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
-              </li>
-            </ul><!--dropdown-menu-->
-          </li><!--/.dropdown-->
-        </ul><!--/.navbar-nav-->
-        <form class="navbar-form navbar-search">
-          <div class="form-group">
-            <div class="form-group">
-              <input type="text" class="form-control search-input" placeholder="type anything">
-            </div>
-          </div>
-          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search hidden-xs"></span><span class="visible-xs-inline-block text-muted">Submit</span></button>
-        </form>
-      </div><!--/#topbar_menu_collapse-->
-    </div><!--/.container-->
-  </nav><!--/.navbar-->
+<?php require_once("../includes/header.php"); ?>
   <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-paperclip glyphicon-pad"></span> Post <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> report</a> <a href="#" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-remove"></span> delete</a></h1>
     <div class="content-block">
@@ -114,7 +51,7 @@
               <span class="pull-right clearfix">
                 <button type="button" class="btn btn-success btn-xs"><span class="hidden-xs">vote up </span><span class="glyphicon glyphicon-thumbs-up"></span></button>
                 <button type="button" class="btn btn-warning btn-xs"><span class="hidden-xs">vote down </span><span class="glyphicon glyphicon-thumbs-down"></span></button>
-              </span> 
+              </span>
             </div>
             <h4 class="post-heading">How to do the node.js and js and jQuery and all and all?</h4>
             <p class="post-body">The less/, js/, and fonts/ are the source code for our CSS, JS, and icon fonts (respectively). The dist/ folder includes everything listed in the precompiled download section above. The docs/ folder includes the source code for our documentation, and examples/ of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
@@ -146,7 +83,7 @@
                 <button type="button" class="btn btn-success btn-xs"><span class="hidden-xs">vote up </span><span class="glyphicon glyphicon-thumbs-up"></span></button>
                 <button type="button" class="btn btn-warning btn-xs"><span class="hidden-xs">vote down </span><span class="glyphicon glyphicon-thumbs-down"></span></button>
                 <button type="button" class="btn btn-danger btn-xs"><span class="hidden-xs">report </span><span class="glyphicon glyphicon-remove"></span></button>
-              </span> 
+              </span>
             </div>
             <h4 class="comment-heading">How to do the node.js and js and jQuery and all and all?</h4>
             <p class="comment-body">The less/, js/, and fonts/ are the source code for our CSS, JS, and icon fonts (respectively). The dist/ folder includes everything listed in the precompiled download section above. The docs/ folder includes the source code for our documentation, and examples/ of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
@@ -163,7 +100,7 @@
                 <button type="button" class="btn btn-success btn-xs"><span class="hidden-xs">vote up </span><span class="glyphicon glyphicon-thumbs-up"></span></button>
                 <button type="button" class="btn btn-warning btn-xs"><span class="hidden-xs">vote down </span><span class="glyphicon glyphicon-thumbs-down"></span></button>
                 <button type="button" class="btn btn-danger btn-xs"><span class="hidden-xs">report </span><span class="glyphicon glyphicon-remove"></span></button>
-              </span> 
+              </span>
             </div>
             <h4 class="comment-heading">How to do the node.js and js and jQuery and all and all?</h4>
             <p class="comment-body">The less/, js/, and fonts/ are the source code for our CSS, JS, and icon fonts (respectively). The dist/ folder includes everything listed in the precompiled download section above. The docs/ folder includes the source code for our documentation, and examples/ of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
@@ -173,7 +110,7 @@
           </div>
         </div><!--/.col+content-->
       </div><!--/.col-->
-      
+
       <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 sidebar-offcanvas" id="sidebar">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -191,27 +128,7 @@
     </div><!--/row-->
   </div><!--/.container-->
 
-  <footer class="footer">
-    <div class="container">
-      <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#footer_menu_collapse">
-            <span class="glyphicon glyphicon-heart glyphicon-ml text-primary"></span>
-          </button><!--navbar-toggle collapsed-->
-          <a class="navbar-brand" href="#">nsu-ed</a>
-        </div>
-        <div class="collapse navbar-collapse" id="footer_menu_collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">faq</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">toc</a></li>
-            <li><a href="#">about</a></li>
-          </ul>
-          <p class="navbar-text navbar-right">&copy; Copyright Lib 2015</p>
-        </div>
-      </nav><!--/.navbar-->
-    </div><!--/.container-->
-  </footer><!--/footer-->
+<?php require_once("../includes/footer.php"); ?>
 
   <!--js scripts -->
   <!--page unspecific--><!--
