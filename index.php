@@ -1,3 +1,8 @@
+<?php
+  $ROOT= $_SERVER['DOCUMENT_ROOT'];
+  require_once("$ROOT/includes/head.php");
+?>
+
 <!doctype html>
 <html lang="en-US">
 
@@ -96,14 +101,29 @@
   			<!--tab data-->
   			<div class="tab-content tab-bordered">
   				<div class="tab-pane fade active in" id="sign_in">
-  					<form>
+<?php
+  if(isset($_POST["username"]) && isset($_POST["password"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    if($username == "admin" && $password == "nsu") { //will be changed
+      $_SESSION["username"] = $username; //logging in
+      jump("/home");
+    } else {
+?>
+<!--PASTE INCORRECT USERNAME MESSAGE HERE-->
+<?php
+    }
+  }
+?>
+  					<form action="index.php" method= "post">
   						<div class="form-group">
     						<label for="username">Username</label>
-    						<input type="text" class="form-control" id="username" placeholder="username">
+    						<input type="text" class="form-control" id="username" name = "username" placeholder="username">
   						</div>
   						<div class="form-group">
     						<label for="password">Password</label>
-    						<input type="password" class="form-control" id="password" placeholder="password">
+    						<input type="password" class="form-control" id="password" name = "password" placeholder="password">
   						</div>
   						<button type="submit" class="btn btn-primary">Submit</button>
   					</form>
