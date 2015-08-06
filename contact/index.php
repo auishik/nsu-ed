@@ -1,5 +1,6 @@
 <?php
   require_once("../includes/head.php");
+  require_once("../includes/database.php");
 ?>
 
 <!doctype html>
@@ -31,14 +32,20 @@
     <div class="m-margin-top row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
 <?php
-  if(isset($_POST["name"]) {
+  if(isset($_POST["name"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $subject = $_POST["contact_subject"];
     $message = $_POST["message"];
 
-  echo $name . $email . $subject . $message;
-  }
+    /*ConnectDb();
+    $query = "INSERT INTO TABLE contact_us (name,description,subject,email) ";
+    $query .= "VALUES ('$name','$message','$subject','$email')";
+
+    query($query); */
+
+    echo "Your message has been successfully sent.";
+  } else {
 ?>
         <form class="form-horizontal" action="index.php" method="post"><!--
           <div class="form-group has-error has-feedback">
@@ -91,6 +98,9 @@
             </div>
           </div>
         </form><!--/.form-horizontal-->
+<?php
+  }
+?>
       </div><!--/.column-->
     </div><!--/.row-->
   </div><!--/.container-->
