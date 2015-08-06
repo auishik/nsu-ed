@@ -66,11 +66,11 @@
             </li>
             <li role="separator" class="divider"></li>
             <li>
-              <a href="/messages"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> messages <span class="badge badge-leftpad badge-active">6</span></a>
+              <a href="/messages/"><span class="glyphicon glyphicon-envelope glyphicon-pad"></span> messages <span class="badge badge-leftpad badge-active">6</span></a>
             </li>
             <li role="separator" class="divider"></li>
             <li>
-              <a href="/profile"><span class="glyphicon glyphicon-wrench glyphicon-pad"></span> settings</a>
+              <a href="/profile/"><span class="glyphicon glyphicon-wrench glyphicon-pad"></span> settings</a>
             </li>
             <li role="separator" class="divider"></li>
             <li>

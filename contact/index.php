@@ -30,7 +30,17 @@
     </div>
     <div class="m-margin-top row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-        <form class="form-horizontal"><!--
+<?php
+  if(isset($_POST["name"]) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["contact_subject"];
+    $message = $_POST["message"];
+
+  echo $name . $email . $subject . $message;
+  }
+?>
+        <form class="form-horizontal" action="index.php" method="post"><!--
           <div class="form-group has-error has-feedback">
             <label class="col-md-2 col-sm-2 control-label" for="contact_name">Name</label>
             <div class="col-md-8 col-sm-10">
@@ -41,13 +51,13 @@
           <div class="form-group">
             <label for="contact_name" class="col-md-2 col-sm-2 control-label">Name</label>
             <div class="col-md-8 col-sm-10">
-              <input type="text" class="form-control" id="contact_name" placeholder="Name">
+              <input type="text" class="form-control" id="contact_name" name="name" placeholder="Name">
             </div>
           </div>
           <div class="form-group">
             <label for="contact_email" class="col-md-2 col-sm-2 control-label">Email</label>
             <div class="col-md-8 col-sm-10">
-              <input type="email" class="form-control" id="contact_email" placeholder="Email">
+              <input type="email" class="form-control" id="contact_email" name="email" placeholder="Email">
             </div>
           </div><!--
           <div class="form-group has-error has-feedback">
@@ -72,7 +82,7 @@
           <div class="form-group">
             <label for="contact_msg" class="col-md-2 col-sm-2 control-label">Message</label>
             <div class="col-md-8 col-sm-10">
-              <textarea class="form-control" id="contact_msg" rows="3" placeholder="Message"></textarea>
+              <textarea class="form-control" id="contact_msg" rows="3" name="message" placeholder="Message"></textarea>
             </div>
           </div>
           <div class="form-group">
