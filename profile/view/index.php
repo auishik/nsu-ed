@@ -43,7 +43,7 @@
           <div class="col-sm-4 text-center text-muted">
             <img class="avatar-big img-rounded" src="/img/avatar.jpg"><br>
             <h3>Jafar Iqbal</h4>
-            <h4>@Jafar</h4>
+            <h4><?php echo "@$USERNAME" ?></h4>
           </div>
           <div class="col-sm-8 text-left" id="score">
             <h6 class="h1 text-alert"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 38</h6>
