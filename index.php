@@ -108,10 +108,10 @@
 
     if($username == "admin" && $password == "nsu") { //will be changed
       $_SESSION["username"] = $username; //logging in
-      jump("/home");
+      jump("/home/");
     } else {
 ?>
-<!--PASTE INCORRECT USERNAME MESSAGE HERE-->
+            <p class="errata alert-danger"><span class="glyphicon glyphicon-info-sign glyphicon-pad"></span> Incorrect username or password</p>
 <?php
     }
   }
