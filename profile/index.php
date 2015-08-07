@@ -33,6 +33,37 @@
             <button type="button" class="btn navbar-btn btn-primary pull-right" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></span></button>
           </div>
         </nav>
+<?php
+  if(isset($_POST["email"]) && isset($_POST["phone"])) {
+    $new_email= $_POST["email"];
+    $new_phone= $_POST["phone"];
+
+    if(!empty($new_email)){
+      $query= "UPDATE user SET email= '$new_email' WHERE id= $USERID";
+      query($query);
+    }
+    if(!empty($new_phone)){
+      $query= "UPDATE user SET phone= $new_phone WHERE id= $USERID";
+      query($query);
+    }
+?>
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+        <h3 class="h1 text-center"><span class="glyphicon glyphicon-thumbs-up text-success"></span></h3>
+        <p class="text-info bg-info errata">Profile updated!</p>
+      </div><!--/.column-->
+<?php
+  }
+
+  $query= "SELECT n.first_name, n.last_name, u.email, u.phone, u.coins FROM nsu_sims n JOIN user u";
+  $query .= " ON (n.id=u.id) WHERE n.id = $USERID";
+  $result= query($query);
+  $row= mysqli_fetch_array($result);
+
+  $full_name = $row["first_name"] . " " . $row["last_name"];
+  $email= $row["email"];
+  $phone= $row["phone"];
+  $coins= $row["coins"];
+?>
         <div class="col-lg-12"><!--content-->
           <div class="row avatar-form">
             <div class="col-sm-2 col-lg-2 avatar-label">Avatar</div>
@@ -40,47 +71,47 @@
               <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#change_avatar"> <span class="glyphicon glyphicon-edit"></span> Change avatar</button>
             </div>
           </div>
-          <form class="form-horizontal">
+          <form class="form-horizontal" action="/profile/" method="post">
             <div class="form-group">
               <label class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
-                <input class="form-control" type="text" placeholder="Jafar Iqbal" readonly>
+                <input class="form-control" type="text" placeholder="<?php echo $full_name; ?>" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Username</label>
               <div class="col-sm-10">
-                <input class="form-control" type="text" placeholder="@Jafar" readonly>
+                <input class="form-control" type="text" placeholder="<?php echo "@$USERNAME"; ?>" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Identification</label>
               <div class="col-sm-10">
-                <input class="form-control" type="text" placeholder="132-1716-043" readonly>
+                <input class="form-control" type="text" placeholder="<?php echo $USERID; ?>" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" placeholder="jafar@iqbal.com">
+                <input type="email" class="form-control" name="email" placeholder="<?php echo $email; ?>">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Password</label>
               <div class="col-sm-10">
-                <p class="form-control-static"><a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-edit"></span> Change password</a></p>
+                <p class="form-control-static"><a href="/checkpoint/change password.php" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-edit"></span> Change password</a></p>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Phone</label>
               <div class="col-sm-10">
-                <input type="tel" class="form-control" placeholder="01733355587">
+                <input type="tel" class="form-control" name="phone" placeholder="<?php echo $phone; ?>">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Stars</label>
               <div class="col-sm-10">
-                <p class="form-control-static text-alert"><span class="glyphicon glyphicon-star"></span> 35</p>
+                <p class="form-control-static text-alert"><span class="glyphicon glyphicon-star"></span> <?php echo $coins; ?></p>
               </div>
             </div>
             <div class="form-group">
@@ -95,7 +126,7 @@
               </div>
             </div>
           </form><hr>
-          <p class="text-right"><a href="#">view as public</a></p>
+          <p class="text-right"><a href="/profile/view/">view as public</a></p>
         </div><!--/.col+content-->
       </div><!--/.col-->
 <?php require_once("../includes/panel.php"); ?>
