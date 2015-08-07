@@ -1,6 +1,6 @@
 <?php
   require_once("../../includes/head.php");
-  if($USERNAME==NULL) jump("/index.php");
+  if($USERNAME==NULL) jump("/index.php?id=1");
 ?>
 
 <!doctype html>
