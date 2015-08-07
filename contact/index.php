@@ -1,6 +1,5 @@
 <?php
   require_once("../includes/head.php");
-  require_once("../includes/database.php");
 ?>
 
 <!doctype html>
@@ -38,11 +37,10 @@
     $subject = $_POST["contact_subject"];
     $message = $_POST["message"];
 
-    /*ConnectDb();
-    $query = "INSERT INTO TABLE contact_us (name,description,subject,email) ";
+    $query = "INSERT INTO contact_us (name,description,subject,email) ";
     $query .= "VALUES ('$name','$message','$subject','$email')";
 
-    query($query); */
+    query($query);
 
     echo "Your message has been successfully sent.";
   } else {
@@ -122,3 +120,4 @@
   </script>
 </body>
 </html>
+<?php CloseDb(); ?>
