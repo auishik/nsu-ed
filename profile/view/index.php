@@ -1,6 +1,6 @@
 <?php
   require_once("../../includes/head.php");
-  if($USERNAME==NULL) jump("/index.php");
+  if($USERNAME==NULL) jump("/index.php?id=1");
 ?>
 
 <!doctype html>
@@ -23,14 +23,14 @@
 <body id="page_profile_view">
 <?php require_once("../../includes/header.php"); ?>
   <div class="container">
-    <h1 class="page-header"><span class="glyphicon glyphicon-user glyphicon-pad"></span> Jafar Iqbal</h1>
-    <div class="content-block">
-      <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-      </ol>
-    </div>
+<?php
+  $query= "SELECT first_name, last_name FROM nsu_sims WHERE id = $USERID";
+  $result= query($query);
+  $row= mysqli_fetch_array($result);
+  $full_name = $row["first_name"] . " " . $row["last_name"];
+?>
+    <h1 class="page-header"><span class="glyphicon glyphicon-user glyphicon-pad"></span> <?php echo $full_name; ?></h1>
+<?php require_once("../../includes/breadcrumb.php"); ?>
     <div class="row row-offcanvas row-offcanvas-right">
       <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
         <nav class="navbar navbar-default visible-xs">
@@ -42,29 +42,22 @@
         <div class="col-lg-12"><!--content-->
           <div class="col-sm-4 text-center text-muted">
             <img class="avatar-big img-rounded" src="/img/avatar.jpg"><br>
-            <h3>Jafar Iqbal</h4>
+            <h3><?php echo $full_name; ?></h4>
             <h4><?php echo "@$USERNAME" ?></h4>
           </div>
           <div class="col-sm-8 text-left" id="score">
-            <h6 class="h1 text-alert"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 38</h6>
+<?php
+    $query= "SELECT coins FROM user WHERE username = '$USERNAME'";
+    $result= query($query);
+    $row= mysqli_fetch_array($result);
+    $coins= $row[0];
+?>
+            <h6 class="h1 text-alert"><span class="glyphicon glyphicon-star glyphicon-pad"></span> <?php echo $coins ?></h6>
             <h6 class="h1 text-warning"><span class="glyphicon glyphicon-king glyphicon-pad"></span> Novice</h6>
           </div>
         </div><!--/.col+content-->
       </div><!--/.col-->
-
-      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 sidebar-offcanvas" id="sidebar">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h6><span class="glyphicon glyphicon-flash glyphicon-pad"></span> Go To</h6>
-          </div>
-          <ul class="list-group">
-            <a href="#" class="list-group-item active"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> ask</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-map-marker glyphicon-pad"></span> activites</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-apple glyphicon-pad"></span> groups</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-check glyphicon-pad"></span> survey</a>
-          </ul>
-        </div>
-      </div><!--/.sidebar-offcanvas-->
+<?php require_once("../../includes/panel.php"); ?>
       <div class="col-lg-12 clearfix clear-both"></div>
     </div><!--/row-->
   </div><!--/.container-->
@@ -99,3 +92,4 @@
 </body>
 
 </html>
+<?php CloseDb(); ?>

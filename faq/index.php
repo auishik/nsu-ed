@@ -21,13 +21,7 @@
 <?php require_once("../includes/header.php"); ?>
   <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Frequently Asked Questions</h1>
-    <div class="content-block">
-      <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-      </ol>
-    </div>
+<?php require_once("../includes/breadcrumb.php"); ?>
     <div class="row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
         <label for="faq_search">Search the faq</label>

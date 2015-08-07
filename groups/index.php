@@ -24,13 +24,7 @@
 <?php require_once("../includes/header.php"); ?>
   <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-folder-open glyphicon-pad"></span> Groups</h1>
-    <div class="content-block">
-      <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-      </ol>
-    </div>
+<?php require_once("../includes/breadcrumb.php"); ?>
     <div class="row row-offcanvas row-offcanvas-right">
       <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
         <nav class="navbar navbar-default visible-xs">
@@ -155,19 +149,7 @@
           <!--#groups ends-->
         </div><!--/.col+content-->
       </div><!--/.col-->
-
-      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 sidebar-offcanvas" id="sidebar">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h6><span class="glyphicon glyphicon-flash glyphicon-pad"></span> Go To</h6>
-          </div>
-          <ul class="list-group">
-            <a href="#" class="list-group-item active"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> ask</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-map-marker glyphicon-pad"></span> activites</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-apple glyphicon-pad"></span> groups</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-check glyphicon-pad"></span> survey</a>
-          </ul>
-        </div>
+<?php require_once("../includes/panel.php"); ?>
       </div><!--/.sidebar-offcanvas-->
       <div class="col-lg-12 clearfix clear-both"></div>
     </div><!--/row-->
