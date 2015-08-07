@@ -13,6 +13,8 @@
 
   session_start();
 
+  require_once("database.php");
+
   function whoami() { //name is similar to unix command
     if(!isset($_SESSION["username"])) return NULL;
     else return $_SESSION["username"];
@@ -21,5 +23,11 @@
   function jump($address) { //redirection function
     header("Location: $address");
   }
-  $USERNAME= whoami();
+  //$USERNAME= whoami();
+  $USERNAME = "admin"; //hard login, temporary user, to be removed
+  ConnectDb();
+  $query= "SELECT id FROM user WHERE username = '$USERNAME'";
+  $result= query($query);
+  $row= mysqli_fetch_array($result);
+  $USERID= $row[0];
 ?>
