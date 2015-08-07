@@ -80,6 +80,10 @@ body {
  * Minor Tweaks/Small Modules - (page unSPECIFIC)
  */
 
+.comment-input {
+  background-color: #eee;
+}
+
 .list-group-item.notify,
 .list-group-item.notify:hover,
 .list-group-item.notify:focus {
@@ -101,6 +105,7 @@ body {
   font-size: 1.7em;
 }
 
+/*
 .list-item-tags-list {
   padding-left: 0px;
   margin: 0px;
@@ -114,7 +119,23 @@ body {
 .list-item-tags-list li + li {
   padding-left: 5px;
 }
+*/
+.list-group-item-text > .btn-group,
+.list-group-item-text > .btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
 
+a > .list-group-item-heading {
+  text-decoration: none;
+  color: #333;
+}
+
+.list-buttons a {
+  vertical-align: top;
+  margin-bottom: 5px;
+}
 
 .post-tags-list {
   padding-left: 15px;
