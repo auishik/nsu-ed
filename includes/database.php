@@ -1,7 +1,7 @@
 <?php
   function ConnectDb() {
     global $connect;
-    $connect = mysqli_connect("localhost","root","1234","nsu-ed");
+    $connect = mysqli_connect("localhost","root","1234","nsu_ed");
 
     if(mysqli_connect_errno()) {
       echo "Unable to connect to database: " . mysqli_connect_error() ."<br/>";
