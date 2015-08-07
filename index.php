@@ -106,7 +106,12 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    if($username == "admin" && $password == "nsu") { //will be changed
+    $query= "SELECT password FROM user WHERE username = '$username'";
+    $result= query($query);
+    $row= mysqli_fetch_array($result);
+    $pass= $row[0]; //password from Db
+
+    if($password == $pass) {
       $_SESSION["username"] = $username; //logging in
       jump("/home/");
     } else {
@@ -115,6 +120,11 @@
 <?php
     }
   }
+  if(isset($_GET['id']))
+    if($_GET['id']==1) {
+?>
+            <p class="errata alert-danger"><span class="glyphicon glyphicon-info-sign glyphicon-pad"></span> You must log in first.</p>
+<?php }
 ?>
   					<form action="index.php" method= "post">
   						<div class="form-group">
@@ -165,3 +175,4 @@
 </body>
 
 </html>
+<?php CloseDb(); ?>
