@@ -45,70 +45,70 @@
           <div class="tab-content xs-margin-top">
             <div class="tab-pane fade active in" id="groups_my">
               <div class="list-group">
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs <span class="label label-default">New</span></h4>
-                  <div class="list-group-item-text">
-                    <button type="button" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</button>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
+                  </a>
+                  <div class="list-group-item-text list-buttons">
+                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs <span class="label label-default">New</span></h4>
-                  <div class="list-group-item-text">
-                    <button type="button" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</button>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
+                  </a>
+                  <div class="list-group-item-text list-buttons">
+                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs <span class="label label-default">New</span></h4>
-                  <div class="list-group-item-text">
-                    <button type="button" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</button>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
+                  </a>
+                  <div class="list-group-item-text list-buttons">
+                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs <span class="label label-default">New</span></h4>
-                  <div class="list-group-item-text">
-                    <button type="button" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</button>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
+                  </a>
+                  <div class="list-group-item-text list-buttons">
+                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
                   </div>
-                </a>
+                </li>
               </div>
             </div><!--/#groups_my-->
             <div class="tab-pane fade" id="groups_create">

@@ -23,7 +23,7 @@
 <body id="page_survey_view">
 <?php require_once("../../includes/header.php"); ?>
   <div class="container">
-    <h1 class="page-header"><span class="glyphicon glyphicon-sunglasses glyphicon-pad"></span> Jafar's Survey <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> report</a></h1>
+    <h1 class="page-header"><span class="glyphicon glyphicon-sunglasses glyphicon-pad"></span> Jafar's Survey <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> report</a> <a href="#" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> results</a></h1>
 <?php require_once("../../includes/breadcrumb.php"); ?>
     <div class="row row-offcanvas row-offcanvas-right">
       <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">

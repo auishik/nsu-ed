@@ -34,101 +34,100 @@
           </div>
         </nav>
         <div class="col-lg-12"><!--content-->
-          <h3 class="h1 sm-margin-top"><span class="glyphicon glyphicon-eye-open"></span> Group is Public</h3>
-
-          <p class="errata text-info bg-info sm-margin-top"><strong>created by</strong> <a href="#" class="btn btn-default btn-xs">Jafar</a></p>
-
-          <p class="errata text-info bg-info sm-margin-top m-margin-bottom">
-            <strong>Description: </strong>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
-          </p>
           <!--group pills-->
           <ul class="nav nav-pills">
-            <li class="active"><a href="#group_posts" data-toggle="tab"><span class="glyphicon glyphicon-question-sign visible-xs-inline-block"></span><span class="hidden-xs">Posts</span></a></li><!--
-            <li><a href="#group_create_post" data-toggle="tab"><span class="glyphicon glyphicon-pencil visible-xs-inline-block"></span><span class="hidden-xs">Create</span></a></li>--><!--
-            <li><a href="#group_add_member" data-toggle="tab"><span class="glyphicon glyphicon-plus-sign visible-xs-inline-block"></span><span class="hidden-xs">Add</span></a></li>-->
-            <li><a href="#group_search" data-toggle="tab"><span class="glyphicon glyphicon-search visible-xs-inline-block"></span><span class="hidden-xs">Search</span></a></li><!--
-            <li><a href="#group_mission" data-toggle="tab"><span class="glyphicon glyphicon-wrench visible-xs-inline-block"></span><span class="hidden-xs">Mission</span></a></li>-->
+            <li class="active"><a href="#group_posts" data-toggle="tab"><span class="glyphicon glyphicon-question-sign visible-xs-inline-block"></span><span class="hidden-xs">Posts</span></a></li>
+            <li><a href="#group_create_post" data-toggle="tab"><span class="glyphicon glyphicon-pencil visible-xs-inline-block"></span><span class="hidden-xs">Create</span></a></li>
+            <li><a href="#group_add_member" data-toggle="tab"><span class="glyphicon glyphicon-plus-sign visible-xs-inline-block"></span><span class="hidden-xs">Add</span></a></li>
+            <li><a href="#group_search" data-toggle="tab"><span class="glyphicon glyphicon-search visible-xs-inline-block"></span><span class="hidden-xs">Search</span></a></li>
+            <li><a href="#group_mission" data-toggle="tab"><span class="glyphicon glyphicon-wrench visible-xs-inline-block"></span><span class="hidden-xs">Mission</span></a></li>
           </ul><!--/.nav-tabs-->
           <!--pills data-->
           <div class="tab-content xs-margin-top">
             <div class="tab-pane fade active in" id="group_posts">
               <div class="list-group">
-                <a href="#" class="list-group-item notify">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                <li href="#" class="list-group-item notify">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok glyphicon-pad"></span> solved</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                      <ul class="list-horizontal list-item-tags-list text-muted">
-                        <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                        <li>php, </li>
-                        <li>bts, </li>
-                        <li>css, </li>
-                        <li>html, </li>
-                        <li>js, </li>
-                        <li>jQuery, </li>
-                        <li>normalize</li>
-                      </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+
+
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok glyphicon-pad"></span> solved</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                      <ul class="list-horizontal list-item-tags-list text-muted">
-                        <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                        <li>php, </li>
-                        <li>bts, </li>
-                        <li>css, </li>
-                        <li>html, </li>
-                        <li>js, </li>
-                        <li>jQuery, </li>
-                        <li>normalize</li>
-                      </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+
+
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok glyphicon-pad"></span> solved</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                      <ul class="list-horizontal list-item-tags-list text-muted">
-                        <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                        <li>php, </li>
-                        <li>bts, </li>
-                        <li>css, </li>
-                        <li>html, </li>
-                        <li>js, </li>
-                        <li>jQuery, </li>
-                        <li>normalize</li>
-                      </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+
+
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok glyphicon-pad"></span> solved</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                      <ul class="list-horizontal list-item-tags-list text-muted">
-                        <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                        <li>php, </li>
-                        <li>bts, </li>
-                        <li>css, </li>
-                        <li>html, </li>
-                        <li>js, </li>
-                        <li>jQuery, </li>
-                        <li>normalize</li>
-                      </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
+                </li>
               </div>
             </div><!--/#group_posts-->
             <div class="tab-pane fade" id="group_create_post">
@@ -148,7 +147,7 @@
                 </div>
                 <button type="submit" class="btn btn-default">Post</button>
               </form>
-            </div><!--/#group_create_post--><!--
+            </div><!--/#group_create_post-->
             <div class="tab-pane fade" id="group_add_member">
               <form>
                 <div class="form-group">
@@ -157,7 +156,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-            </div>--><!--/#groups_add_member-->
+            </div><!--/#groups_add_member-->
             <div class="tab-pane fade" id="group_search">
               <form>
                 <div class="form-group">
@@ -166,10 +165,15 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-            </div><!--/#groups_search--><!--
+            </div><!--/#groups_mission-->
             <div class="tab-pane fade" id="group_mission">
-              --><!--plans to add members list--><!--
+              <!--plans to add members list-->
               <form>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control" rows="4" maxlength="140">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</textarea>
+                </div>
+                <span id="helpBlock" class="help-block">within 140 characters</span>
                 <div class="checkbox">
                   <label>
                     <input type="checkbox" value="set_private" checked> Set group as private
@@ -177,7 +181,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-            </div>--><!--/#groups_search-->
+            </div><!--/#groups_search-->
           </div><!--/.tab-content ends-->
           <!--#groups ends-->
         </div><!--/.col+content-->

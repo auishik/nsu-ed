@@ -22,8 +22,8 @@ body {
 
 /**
  * Large Module classes - (page unSPECIFIC)
- * 
- */ 
+ *
+ */
 
 /*
   off-canvas styling
@@ -80,6 +80,10 @@ body {
  * Minor Tweaks/Small Modules - (page unSPECIFIC)
  */
 
+.comment-input {
+  background-color: #eee;
+}
+
 .list-group-item.notify,
 .list-group-item.notify:hover,
 .list-group-item.notify:focus {
@@ -101,6 +105,7 @@ body {
   font-size: 1.7em;
 }
 
+/*
 .list-item-tags-list {
   padding-left: 0px;
   margin: 0px;
@@ -114,7 +119,23 @@ body {
 .list-item-tags-list li + li {
   padding-left: 5px;
 }
+*/
+.list-group-item-text > .btn-group,
+.list-group-item-text > .btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
 
+a > .list-group-item-heading {
+  text-decoration: none;
+  color: #333;
+}
+
+.list-buttons a {
+  vertical-align: top;
+  margin-bottom: 5px;
+}
 
 .post-tags-list {
   padding-left: 15px;
@@ -185,14 +206,14 @@ button > a.display-block {
   padding: 0px;
   height: 100%;
   color: inherit;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .list-group-item > a.display-block {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 footer .navbar {
@@ -218,7 +239,7 @@ footer .navbar {
   height: 36px;
   margin-top: -6px;
   margin-bottom: -6px;
-} 
+}
 
 .avatar-form {
   margin-bottom: 15px;
@@ -374,7 +395,7 @@ footer .navbar-text {
     line-height: 1.5;
     border-radius: 3px;
   }
-  
+
   .btn-xs-in > .badge,
   .btn-group-xs-in > .btn .badge {
     top: 0;

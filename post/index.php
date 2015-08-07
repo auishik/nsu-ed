@@ -102,6 +102,21 @@
               comment by <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-question-sign"></span> Jafar</a>
             </div>
           </div>
+          <div class="m-margin-top comment-input errata">
+            <h3>Comment on the post</h3>
+            <form>
+              <div class="form-group">
+                <label for="comment_title">Title</label>
+                <input type="text" class="form-control" id="comment_title" placeholder="Comment Title">
+              </div>
+
+              <div class="form-group">
+                <label for="comment_body">Body</label>
+                <textarea class="form-control" maxlength="140">Your comment</textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div><!--/.col+content-->
       </div><!--/.col-->
 <?php require_once("../includes/panel.php"); ?>

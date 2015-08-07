@@ -47,242 +47,242 @@
           <div class="tab-content xs-margin-top">
             <div class="tab-pane fade active in" id="surveys_recent">
               <div class="list-group">
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
+                </li>
               </div>
             </div><!--/#surveys_recent-->
             <div class="tab-pane fade" id="surveys_trending">
               <div class="list-group">
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
+                </li>
               </div>
             </div><!--/#surveys_trending-->
             <div class="tab-pane fade" id="surveys_my">
               <div class="list-group">
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account? <span class="label label-default">New</span></h4>
+                </li>
+                <li href="#" class="list-group-item">
+                  <a href="#">
+                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                  </a>
                   <div class="list-group-item-text">
-                    <div class="btn-group btn-group-sm btn-group-xs-in xs-margin-bottom">
+                    <div class="btn-group btn-group-sm btn-group-xs-in">
                       <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-star glyphicon-pad"></span> 48 stars</button>
                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-question-sign glyphicon-pad"></span> Jafar</button>
                     </div>
-                    <ul class="list-horizontal list-item-tags-list text-muted">
-                      <button type="button" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> Tags</button>
-                      <li>php, </li>
-                      <li>bts, </li>
-                      <li>css, </li>
-                      <li>html, </li>
-                      <li>js, </li>
-                      <li>jQuery, </li>
-                      <li>normalize</li>
-                    </ul>
+
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> php</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> bts</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> css</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> html</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> js</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> jQuery</a>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
-                </a>
+                </li>
               </div>
             </div><!--/#surveys_my-->
             <div class="tab-pane fade" id="surveys_create">

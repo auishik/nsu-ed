@@ -63,7 +63,7 @@
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <p class="text-info bg-info errata">In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready.</p>
+        <p class="text-info bg-info errata sm-margin-top">In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready.</p>
 <?php
   }
 ?>
