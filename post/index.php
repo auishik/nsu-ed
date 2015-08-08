@@ -53,15 +53,10 @@
               asked by <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-question-sign"></span> Jafar</a>
             </div>
             <div class="post-tags text-left xs-margin-top">
-              <div class="btn-group btn-group-xs">
-                <button type="button" class="btn btn-primary"><a class="display-block" href="#"><span class="glyphicon glyphicon-tag glyphicon-pad"></span> Tags</a></button>
-                <ul class="list-horizontal post-tags-list">
-                  <li><a href="#">php, </a></li>
-                  <li><a href="#">js, </a></li>
-                  <li><a href="#">html, </a></li>
-                  <li><a href="#">bts</a></li>
-                </ul>
-              </div>
+              <a class="btn btn-xs btn-primary" href="#"><span class="glyphicon glyphicon-tag glyphicon-pad"></span> php</a>
+              <a class="btn btn-xs btn-primary" href="#"><span class="glyphicon glyphicon-tag glyphicon-pad"></span> js</a>
+              <a class="btn btn-xs btn-primary" href="#"><span class="glyphicon glyphicon-tag glyphicon-pad"></span> html</a>
+              <a class="btn btn-xs btn-primary" href="#"><span class="glyphicon glyphicon-tag glyphicon-pad"></span> bts</a>
             </div>
           </div>
           <!--/.post-->
