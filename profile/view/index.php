@@ -24,7 +24,8 @@
 <?php require_once("../../includes/header.php"); ?>
   <div class="container">
 <?php
-  $query= "SELECT first_name, last_name FROM nsu_sims WHERE id = $USERID";
+  $get_user= $_GET["id"];
+  $query= "SELECT first_name, last_name FROM nsu_sims WHERE id = $get_user" ;
   $result= query($query);
   $row= mysqli_fetch_array($result);
   $full_name = $row["first_name"] . " " . $row["last_name"];
@@ -47,7 +48,7 @@
           </div>
           <div class="col-sm-8 text-left" id="score">
 <?php
-    $query= "SELECT coins FROM user WHERE username = '$USERNAME'";
+    $query= "SELECT coins FROM user WHERE id = $get_user";
     $result= query($query);
     $row= mysqli_fetch_array($result);
     $coins= $row[0];

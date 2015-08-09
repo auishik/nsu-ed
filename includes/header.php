@@ -58,7 +58,7 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="/profile/view/"><span class="glyphicon glyphicon-user glyphicon-pad"></span><?php echo $USERNAME; ?></a>
+              <a href="/profile/view/?id=<?php echo $USERID; ?>"><span class="glyphicon glyphicon-user glyphicon-pad"></span><?php echo $USERNAME; ?></a>
             </li>
             <li role="separator" class="divider"></li>
             <li>
