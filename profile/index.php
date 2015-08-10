@@ -1,5 +1,9 @@
 <?php
   require_once("../includes/head.php");
+  /*session_start();
+  if(isset($_SESSION["username"])) $USERNAME= $_SESSION["username"];
+  else $USERNAME= NULL;
+  $USERID= GetId($USERNAME);*/
   if($USERNAME==NULL) jump("/index.php?id=1");
 ?>
 
@@ -126,7 +130,7 @@
               </div>
             </div>
           </form><hr>
-          <p class="text-right"><a href="/profile/view/">view as public</a></p>
+          <p class="text-right"><a href="/profile/view/?id=<?php echo $USERID; ?>">view as public</a></p>
         </div><!--/.col+content-->
       </div><!--/.col-->
 <?php require_once("../includes/panel.php"); ?>
