@@ -45,31 +45,57 @@
 ?>
     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
       <h3 class="h1 text-center"><span class="glyphicon glyphicon-thumbs-up text-success"></span></h3>
-      <p class="text-info bg-info errata">Comment added!</p>
+      <p class="text-info bg-info errata">Comment posted!</p>
     </div><!--/.column-->
 <?php
   }
-  if(isset($_GET["f"]) && $_GET["f"]=="rep_post") {
-    //rep_post function response
-    $query= "INSERT INTO report_post (post_id,reporter_id) VALUES ($POSTID,$USERID)";
-    query($query);
+  if(isset($_GET["f"])) {
+    if($_GET["f"]=="rep_post") {
+      //rep_post function response
+      $query= "INSERT INTO report_post (post_id,reporter_id) VALUES ($POSTID,$USERID)";
+      query($query);
 ?>
     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
       <p class="text-info bg-info errata">Post reported!</p>
     </div><!--/.column-->
 <?php
-  } elseif(isset($_GET["f"]) && $_GET["f"]=="del_post") {
-    //del_post function response
-    $query= "DELETE FROM post WHERE post_id= $POSTID";
-    query($query);
+    } elseif($_GET["f"]=="del_post") {
+      //del_post function response
+      $query= "DELETE FROM post WHERE post_id= $POSTID";
+      query($query);
 
-    $query= "DELETE FROM comment WHERE post_id= $POSTID";
-    query($query);
+      $query= "DELETE FROM comment WHERE post_id= $POSTID";
+      query($query);
 ?>
     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
       <p class="text-info bg-info errata">Post deleted!</p>
     </div><!--/.column-->
 <?php
+    } elseif($_GET["f"]=="up_post") {
+      $query= "UPDATE post SET vote= vote+1 WHERE post_id= $POSTID";
+      query($query);
+    } elseif($_GET["f"]=="down_post") {
+      $query= "UPDATE post SET vote= vote-1 WHERE post_id= $POSTID";
+      query($query);
+    } elseif($_GET["f"]=="up_comment") {
+      $cid= $_GET["cid"];
+      $query= "UPDATE comment SET vote= vote+1 WHERE comment_id= $cid";
+      query($query);
+    } elseif($_GET["f"]=="down_comment") {
+      $cid= $_GET["cid"];
+      $query= "UPDATE comment SET vote= vote-1 WHERE comment_id= $cid";
+      query($query);
+    } elseif($_GET["f"]=="rep_comment") {
+      $cid= $_GET["cid"];
+      $query= "INSERT INTO report_comment (comment_id,reporter_id)";
+      $query .= " VALUES ($cid,$USERID)";
+      query($query);
+?>
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+      <p class="text-info bg-info errata">Comment reported!</p>
+    </div><!--/.column-->
+<?php
+    }
   }
 ?>
     <div class="row row-offcanvas row-offcanvas-right">
@@ -107,8 +133,8 @@
               <span class="badge"><?php echo $vote; ?></span>
               <span class="text-muted"> votes</span>
               <span class="pull-right clearfix">
-                <button type="button" class="btn btn-success btn-xs"><span class="hidden-xs">vote up </span><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                <button type="button" class="btn btn-warning btn-xs"><span class="hidden-xs">vote down </span><span class="glyphicon glyphicon-thumbs-down"></span></button>
+                <a href="?id=<?php echo "$POSTID&f=up_post"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a></h1>
+                <a href="?id=<?php echo "$POSTID&f=down_post"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a></h1>
               </span>
             </div>
             <h4 class="post-heading"><?php echo $title; ?></h4>
@@ -128,11 +154,12 @@
             </div>
           </div>
 <?php
-  $query= "SELECT c.vote, c.body, u.username, u.id FROM comment c JOIN user u ON (c.commenter_id=u.id)";
+  $query= "SELECT c.comment_id cid, c.vote, c.body, u.username, u.id FROM comment c JOIN user u ON (c.commenter_id=u.id)";
   $query .= " WHERE c.post_id= $POSTID AND c.is_best= 1";
   $result= query($query);
   $row= mysqli_fetch_array($result);
   if(!empty($row["body"])) {
+    $cid= $row["cid"];
 ?>
           <div class="comment errata m-margin-top bg-success">
             <div class="comment-best text-success text-center">
@@ -142,9 +169,9 @@
               <span class="badge"><?php echo $row["vote"]; ?></span>
               <span class="text-muted"> votes</span>
               <span class="pull-right clearfix">
-                <button type="button" class="btn btn-success btn-xs"><span class="hidden-xs">vote up </span><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                <button type="button" class="btn btn-warning btn-xs"><span class="hidden-xs">vote down </span><span class="glyphicon glyphicon-thumbs-down"></span></button>
-                <button type="button" class="btn btn-danger btn-xs"><span class="hidden-xs">report </span><span class="glyphicon glyphicon-remove"></span></button>
+                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a></h1>
+                <a href="?id=<?php echo "$POSTID&f=down_comment&cid=$cid"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a></h1>
+                <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a></h1>
               </span>
             </div>
             <p class="comment-body"><?php echo $row["body"]; ?></p>
@@ -154,21 +181,22 @@
           </div>
 <?php
   }
-  $query= "SELECT c.vote, c.body, u.username, u.id FROM comment c JOIN user u ON (c.commenter_id=u.id)";
+  $query= "SELECT c.comment_id cid, c.vote, c.body, u.username, u.id FROM comment c JOIN user u ON (c.commenter_id=u.id)";
   $query .= " WHERE c.post_id= $POSTID AND c.is_best= 0";
   $result= query($query);
 
   while($row= mysqli_fetch_array($result)) {
+    $cid= $row["cid"];
 ?>
           <div class="comment errata m-margin-top bg-warning">
             <div class="comment-votes">
               <span class="badge"> <?php echo $row["vote"]; ?></span>
               <span class="text-muted"> votes</span>
               <span class="pull-right clearfix">
-                <button type="button" class="btn btn-success btn-xs"><span class="hidden-xs">vote up </span><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                <button type="button" class="btn btn-warning btn-xs"><span class="hidden-xs">vote down </span><span class="glyphicon glyphicon-thumbs-down"></span></button>
-                <button type="button" class="btn btn-danger btn-xs"><span class="hidden-xs">report </span><span class="glyphicon glyphicon-remove"></span></button>
-              </span>
+                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a></h1>
+                <a href="?id=<?php echo "$POSTID&f=down_comment&cid=$cid"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a></h1>
+                <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a></h1>
+                </span>
             </div>
             <p class="comment-body"><?php echo $row["body"]; ?></p>
             <div class="comment-owner text-right">
