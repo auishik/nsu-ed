@@ -1,5 +1,6 @@
 <?php
   require_once("../includes/head.php");
+  require_once("../includes/functions.php");
   if($USERNAME==NULL) jump("/index.php?id=1");
 ?>
 
@@ -33,24 +34,7 @@
             <button type="button" class="btn navbar-btn btn-primary pull-right" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></span></button>
           </div>
         </nav>
-<?php
-  if(isset($_POST["title"])) {
-  $title= $_POST["title"];
-  $body= $_POST["body"];
-  $tags= $_POST["tags"];
-  if(isset($_POST["is_private"])) $is_private= 1;
-  else $is_private= 0;
-
-  $query= "INSERT INTO groups (group_name,description,owner_id,time,is_private)";
-  $query .= " VALUES ('$title','$body',$USERID,000,$is_private)";
-  query($query);
-?>
-    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-      <p class="text-info bg-info errata">Group created!</p>
-    </div><!--/.column-->
-<?php
-  }
-?>
+<?php CreateGroup($USERID); ?>
         <div class="col-lg-12"><!--content-->
           <!--#groups starts-->
           <!--group pills-->
@@ -91,21 +75,21 @@
               <form action="index.php" method="post">
                 <div class="form-group">
                   <label for="group_title">Title</label>
-                  <input type="text" class="form-control" name="title" id="group_title" placeholder="Title">
+                  <input type="text" class="form-control" name="group_title" id="group_title" placeholder="Title">
                 </div>
                 <div class="form-group">
                   <label for="group_intro">Description</label>
-                  <textarea class="form-control" maxlength="140" name="body" id="group_intro"></textarea>
+                  <textarea class="form-control" maxlength="140" name="group_body" id="group_intro"></textarea>
                   <p class="help-block">within 140 characters.</p>
                 </div>
                 <div class="form-group">
                   <label for="group_tags">Tags</label>
-                  <input type="text" class="form-control" name="tags" id="group_tags" placeholder="php, js, html">
+                  <input type="text" class="form-control" name="group_tags" id="group_tags" placeholder="php, js, html">
                   <p class="help-block">separate tags with a comma <kbd>,</kbd>.</p>
                 </div>
                 <div class="checkbox">
                   <label for="group_private">
-                    <input type="checkbox" name="is_private" id="group_private"> private
+                    <input type="checkbox" name="group_private" id="group_private"> private
                   </label>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>

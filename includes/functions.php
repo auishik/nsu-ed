@@ -51,4 +51,24 @@
       </div><!--/.column-->
 <?php
   }
+
+  function CreateGroup($user) {
+    if(isset($_POST["group_title"])) {
+      $title= $_POST["group_title"];
+      $body= $_POST["group_body"];
+      $tags= $_POST["group_tags"];
+      if(isset($_POST["group_private"])) $is_private= 1;
+      else $is_private= 0;
+      $time= time();
+
+      $query= "INSERT INTO groups (group_name,description,owner_id,time,is_private)";
+      $query .= " VALUES ('$title','$body',$user,$time,$is_private)";
+      query($query);
+?>
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+      <p class="text-info bg-info errata">Group created!</p>
+    </div><!--/.column-->
+<?php
+    }
+  }
 ?>
