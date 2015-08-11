@@ -3,12 +3,18 @@
     if(isset($_POST["post_title"])) {
       $title= $_POST["post_title"];
       $body= $_POST["post_body"];
-      $tags= $_POST["post_tags"];
       $time= time();
 
       $query= "INSERT INTO post (title,body,vote,is_solved,group_id,poster_id,time)";
       $query .= " VALUES ('$title','$body',0,0,$group,$userid,$time)";
       query($query);
+
+      //tag processor
+      $query= "SELECT post_id FROM post WHERE time= $time"; //getting id of last added post
+      $result= query($query);
+      $row= mysqli_fetch_array($result);
+      $tags= $_POST["post_tags"];
+      AddTag($tags,$row["post_id"],"post");
 ?>
       <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
         <p class="text-info bg-info errata">Post created!</p>
@@ -56,7 +62,6 @@
     if(isset($_POST["group_title"])) {
       $title= $_POST["group_title"];
       $body= $_POST["group_body"];
-      $tags= $_POST["group_tags"];
       if(isset($_POST["group_private"])) $is_private= 1;
       else $is_private= 0;
       $time= time();
@@ -64,11 +69,29 @@
       $query= "INSERT INTO groups (group_name,description,owner_id,time,is_private)";
       $query .= " VALUES ('$title','$body',$user,$time,$is_private)";
       query($query);
+
+      //tag processor
+      $query= "SELECT group_id FROM groups WHERE time= $time"; //getting id of last added post
+      $result= query($query);
+      $row= mysqli_fetch_array($result);
+      $tags= $_POST["group_tags"];
+      AddTag($tags,$row["post_id"],"group");
 ?>
     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
       <p class="text-info bg-info errata">Group created!</p>
     </div><!--/.column-->
 <?php
+    }
+  }
+
+  function AddTag($str,$id,$type) {
+    $str=preg_replace('/\s+/', '', $str);
+    $tags= explode(",",$str);
+
+    foreach ($tags as $value) {
+      $value= strtolower($value);
+      $query= "INSERT INTO tag VALUES ('$value',$id,'$type')";
+      query($query);
     }
   }
 ?>
