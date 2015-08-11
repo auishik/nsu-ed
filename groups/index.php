@@ -33,6 +33,24 @@
             <button type="button" class="btn navbar-btn btn-primary pull-right" data-toggle="offcanvas"><span class="glyphicon glyphicon-chevron-right"></span></button>
           </div>
         </nav>
+<?php
+  if(isset($_POST["title"])) {
+  $title= $_POST["title"];
+  $body= $_POST["body"];
+  $tags= $_POST["tags"];
+  if(isset($_POST["is_private"])) $is_private= 1;
+  else $is_private= 0;
+
+  $query= "INSERT INTO groups (group_name,description,owner_id,time,is_private)";
+  $query .= " VALUES ('$title','$body',$USERID,000,$is_private)";
+  query($query);
+?>
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+      <p class="text-info bg-info errata">Group created!</p>
+    </div><!--/.column-->
+<?php
+  }
+?>
         <div class="col-lg-12"><!--content-->
           <!--#groups starts-->
           <!--group pills-->
@@ -45,91 +63,49 @@
           <div class="tab-content xs-margin-top">
             <div class="tab-pane fade active in" id="groups_my">
               <div class="list-group">
+<?php
+  $query= "SELECT group_id, group_name, description, is_private FROM groups WHERE owner_id= $USERID";
+  $result= query($query);
+  while($row= mysqli_fetch_array($result)) {
+?>
                 <li href="#" class="list-group-item">
-                  <a href="#">
-                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
+                  <a href="/groups/view/?id=<?php echo $row["group_id"]; ?>">
+                    <h4 class="list-group-item-heading xs-margin-bottom"><?php echo $row["group_name"]; ?></h4>
                   </a>
                   <div class="list-group-item-text list-buttons">
-                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
+                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> <?php if($row["is_private"]) echo "private"; else echo "public"; ?></a>
+<?php
+    $group_id= $row["group_id"];
+    $query= "SELECT tag_name FROM tag WHERE post_id= '$group_id' AND type= 'group'";
+    $res= query($query);
+    while($tags= mysqli_fetch_array($res)) {
+?>
+                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> <?php echo $tags["tag_name"]; ?></a>
+<?php   } ?>
                   </div>
                 </li>
-                <li href="#" class="list-group-item">
-                  <a href="#">
-                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
-                  </a>
-                  <div class="list-group-item-text list-buttons">
-                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                  </div>
-                </li>
-                <li href="#" class="list-group-item">
-                  <a href="#">
-                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
-                  </a>
-                  <div class="list-group-item-text list-buttons">
-                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                  </div>
-                </li>
-                <li href="#" class="list-group-item">
-                  <a href="#">
-                    <h4 class="list-group-item-heading xs-margin-bottom">CSE 311 Labs</h4>
-                  </a>
-                  <div class="list-group-item-text list-buttons">
-                    <a href="#" class="btn btn-warning btn-sm btn-xs-in xs-margin-bottom"><span class="glyphicon glyphicon-eye-open glyphicon-pad"></span> public</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> PHP</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> HTML</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> CSS</a>
-                    <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> JS</a>
-                  </div>
-                </li>
+<?php } ?>
               </div>
             </div><!--/#groups_my-->
             <div class="tab-pane fade" id="groups_create">
-              <form>
+              <form action="index.php" method="post">
                 <div class="form-group">
                   <label for="group_title">Title</label>
-                  <input type="text" class="form-control" id="group_title" placeholder="Title">
+                  <input type="text" class="form-control" name="title" id="group_title" placeholder="Title">
                 </div>
                 <div class="form-group">
                   <label for="group_intro">Description</label>
-                  <textarea class="form-control" maxlength="140" id="group_intro"></textarea>
+                  <textarea class="form-control" maxlength="140" name="body" id="group_intro"></textarea>
                   <p class="help-block">within 140 characters.</p>
                 </div>
                 <div class="form-group">
                   <label for="group_tags">Tags</label>
-                  <input type="text" class="form-control" id="group_tags" placeholder="php, js, html">
+                  <input type="text" class="form-control" name="tags" id="group_tags" placeholder="php, js, html">
                   <p class="help-block">separate tags with a comma <kbd>,</kbd>.</p>
                 </div>
                 <div class="checkbox">
                   <label for="group_private">
-                    <input type="checkbox" id="group_private"> private
+                    <input type="checkbox" name="is_private" id="group_private"> private
                   </label>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>

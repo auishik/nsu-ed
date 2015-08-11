@@ -1,9 +1,9 @@
 <?php
   // server should keep session data for AT LEAST 1 hour
-  ini_set('session.gc_maxlifetime', 3600);
+  //ini_set('session.gc_maxlifetime', 3600);
 
   // each client should remember their session id for EXACTLY 1 hour
-  session_set_cookie_params(3600);
+  //session_set_cookie_params(3600);
 
   /*session_start('my',-expires=1440,-usecookie=true); // ready to go!
 
@@ -26,8 +26,11 @@
   //$USERNAME= whoami();
   $USERNAME = "admin"; //hard login, temporary user, to be removed
   ConnectDb();
-  $query= "SELECT id FROM user WHERE username = '$USERNAME'";
-  $result= query($query);
-  $row= mysqli_fetch_array($result);
-  $USERID= $row[0];
+  function GetId($username){
+    $query= "SELECT id FROM user WHERE username = '$username'";
+    $result= query($query);
+    $row= mysqli_fetch_array($result);
+    return $row[0];
+  }
+  $USERID= GetId($USERNAME);
 ?>

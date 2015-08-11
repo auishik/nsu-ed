@@ -1,6 +1,7 @@
 <?php
   $ROOT= $_SERVER['DOCUMENT_ROOT'];
   require_once("$ROOT/includes/head.php");
+  //session_start();
 ?>
 
 <!doctype html>
