@@ -108,13 +108,14 @@
         </nav>
         <div class="col-lg-12"><!--content-->
 <?php
-  $query= "SELECT vote, title, body, is_solved FROM post WHERE post_id = $POSTID";
+  $query= "SELECT vote, title, body, is_solved, time FROM post WHERE post_id = $POSTID";
   $result= query($query);
   $row= mysqli_fetch_array($result);
   $vote= $row["vote"];
   $title= $row["title"];
   $body= $row["body"];
   $is_solved= $row["is_solved"];
+  $time= ToDate($row["time"]);
 
   $query= "SELECT u.username, u.id FROM user u JOIN post p ON (u.id=p.poster_id) WHERE p.post_id= $POSTID";
   $result= query($query);
@@ -141,7 +142,9 @@
             <p class="post-body"><?php echo $body; ?></p>
             <div class="post-owner text-right">
               asked by <a href="/profile/view?id=<?php echo $row["id"]; ?>" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-question-sign"></span> <?php echo $poster; ?></a>
+<?php echo "on $time"; ?>
             </div>
+
             <div class="post-tags text-left xs-margin-top">
             <!--/.post-->
 <?php

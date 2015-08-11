@@ -4,10 +4,10 @@
       $title= $_POST["post_title"];
       $body= $_POST["post_body"];
       $tags= $_POST["post_tags"];
+      $time= time();
 
       $query= "INSERT INTO post (title,body,vote,is_solved,group_id,poster_id,time)";
-      $query .= " VALUES ('$title','$body',0,0,$group,$userid,000)";
-      //echo $query; //
+      $query .= " VALUES ('$title','$body',0,0,$group,$userid,$time)";
       query($query);
 ?>
       <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">

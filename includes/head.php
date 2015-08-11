@@ -23,6 +23,10 @@
   function jump($address) { //redirection function
     header("Location: $address");
   }
+
+  function ToDate($time) {
+    return date('d/m/Y H:i;s', $time);
+  }
   //$USERNAME= whoami();
   $USERNAME = "admin"; //hard login, temporary user, to be removed
   ConnectDb();
