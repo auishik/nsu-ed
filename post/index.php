@@ -145,7 +145,7 @@
             <div class="post-tags text-left xs-margin-top">
             <!--/.post-->
 <?php
-  $query= "SELECT t.tag_name FROM tag t JOIN post p ON(t.post_id=p.post_id) WHERE t.type= 'post'";
+  $query= "SELECT tag_name FROM tag WHERE type= 'post' AND post_id=$POSTID";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
 ?>
