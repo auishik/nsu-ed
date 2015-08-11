@@ -25,146 +25,45 @@
   <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-sort-by-alphabet glyphicon-pad"></span> Survey Format</h1>
 <?php require_once("../../../includes/breadcrumb.php"); ?>
+<?php
+  if(isset($_POST["survey_mcq_no"]))
+    $mcq_no= $_POST["survey_mcq_no"];
+  if(isset($_POST["survey_option_no"]))
+    $option_no= $_POST["survey_option_no"];
+
+  if(isset($_POST["questions"])) {
+    //questions array holding questions
+    //options array holding options
+    //INSERTion goes here
+  }
+  else {
+?>
     <div class="row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-        <form class="form-horizontal">
+        <form action="index.php" method="post" class="form-horizontal">
           <!--question 1-->
+<?php
+    for($i=1;$i<=$mcq_no;$i++) {
+?>
           <div class="form-bundle">
             <div class="form-group">
-              <label for="q_1" class="col-sm-2 control-label">Question 1</label>
+              <label for="q_<?php echo $i; ?>" class="col-sm-2 control-label">Question <?php echo $i; ?></label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1" placeholder="Question">
+                <input type="text" class="form-control" name="questions[]" id="q_<?php echo $i; ?>"; placeholder="Question">
               </div>
             </div>
+<?php
+      for($j=1;$j<=$option_no;$j++) {
+?>
             <div class="form-group">
-              <label for="q_1_opt_1" class="col-sm-2 control-label">Option 1</label>
+              <label for="opt_<?php echo $i."_".$j;?>" class="col-sm-2 control-label">Option <?php echo $j; ?></label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1_opt_1" placeholder="Option">
+                <input type="text" class="form-control" name="options[]" id="opt_<?php echo $i."_".$j;?>" placeholder="Option">
               </div>
             </div>
-            <div class="form-group">
-              <label for="q_1_opt_2" class="col-sm-2 control-label">Option 2</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1_opt_2" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_1_opt_3" class="col-sm-2 control-label">Option 3</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1_opt_3" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_1_opt_4" class="col-sm-2 control-label">Option 4</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1_opt_4" placeholder="Option">
-              </div>
-            </div>
+<?php   } ?>
           </div>
-
-          <!--question 2-->
-          <div class="form-bundle">
-            <div class="form-group">
-              <label for="q_2" class="col-sm-2 control-label">Question 2</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1" placeholder="Question">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_2_opt_1" class="col-sm-2 control-label">Option 1</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_2_opt_1" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_2_opt_2" class="col-sm-2 control-label">Option 2</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_2_opt_2" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_2_opt_3" class="col-sm-2 control-label">Option 3</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_2_opt_3" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_2_opt_4" class="col-sm-2 control-label">Option 4</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_2_opt_4" placeholder="Option">
-              </div>
-            </div>
-          </div>
-
-
-
-          <!--question 3-->
-          <div class="form-bundle">
-            <div class="form-group">
-              <label for="q_3" class="col-sm-2 control-label">Question 3</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1" placeholder="Question">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_3_opt_1" class="col-sm-2 control-label">Option 1</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_3_opt_1" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_3_opt_2" class="col-sm-2 control-label">Option 2</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_3_opt_2" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_3_opt_3" class="col-sm-2 control-label">Option 3</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_3_opt_3" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_3_opt_4" class="col-sm-2 control-label">Option 4</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_3_opt_4" placeholder="Option">
-              </div>
-            </div>
-          </div>
-
-          <!--question 4-->
-          <div class="form-bundle">
-            <div class="form-group">
-              <label for="q_5" class="col-sm-2 control-label">Question 4</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_1" placeholder="Question">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_5_opt_1" class="col-sm-2 control-label">Option 1</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_5_opt_1" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_5_opt_2" class="col-sm-2 control-label">Option 2</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_5_opt_2" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_5_opt_3" class="col-sm-2 control-label">Option 3</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_5_opt_3" placeholder="Option">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="q_5_opt_4" class="col-sm-2 control-label">Option 4</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="q_5_opt_4" placeholder="Option">
-              </div>
-            </div>
-          </div>
+<?php } ?>
 
           <div class="form-group">
             <div class="col-sm-12">
@@ -172,6 +71,7 @@
             </div>
           </div>
         </form>
+<?php } ?>
       </div><!--/.column-->
     </div><!--/.row-->
   </div><!--/.container-->

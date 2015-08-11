@@ -286,19 +286,19 @@
               </div>
             </div><!--/#surveys_my-->
             <div class="tab-pane fade" id="surveys_create">
-              <form>
+              <form action="/survey/create/" method="post">
                 <div class="form-group">
                   <label for="survey_title">Title</label>
-                  <input type="text" class="form-control" id="post_title" placeholder="Title">
+                  <input type="text" class="form-control" name="survey_title" id="survey_title" placeholder="Title">
                 </div>
                 <div class="form-group">
                   <label for="survey_body">Body</label>
-                  <textarea class="form-control" maxlength="140" id="post_body" placeholder="short description"></textarea>
+                  <textarea class="form-control" maxlength="140" name="survey_body" id="survey_body" placeholder="short description"></textarea>
                   <p class="help-block">within 140 characters.</p>
                 </div>
                 <div class="form-group">
                   <label for="survey_tags">Tags</label>
-                  <input type="text" class="form-control" id="posts_tags" placeholder="php, js, html">
+                  <input type="text" class="form-control" name="survey_tags" id="survey_tags" placeholder="php, js, html">
                   <p class="help-block">separate tags with a comma <kbd>,</kbd>.</p>
                 </div>
                 <button type="submit" class="btn btn-primary">Next <span class="glyphicon glyphicon-chevron-right"></span></button>

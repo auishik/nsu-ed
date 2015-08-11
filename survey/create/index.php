@@ -1,6 +1,8 @@
-<?php
+ <?php
   require_once("../../includes/head.php");
+  require_once("../../includes/functions.php");
   if($USERNAME==NULL) jump("/index.php?id=1");
+  //if(!isset($_POST["survey_title"])) jump("/survey/");
 ?>
 
 <!doctype html>
@@ -25,19 +27,34 @@
   <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-sort-by-alphabet glyphicon-pad"></span> Survey Format</h1>
 <?php require_once("../../includes/breadcrumb.php"); ?>
+<?php
+  $title= $_POST["survey_title"];
+  $body= $_POST["survey_body"];
+  $time= time();
+
+  $query= "INSERT INTO survey VALUES (NULL,'$title','$body',$USERID,$time,0)";
+  query($query);
+
+  //tag processor
+  $query= "SELECT survey_id FROM survey WHERE time= $time"; //getting id of last added survey
+  $result= query($query);
+  $row= mysqli_fetch_array($result);
+  $tags= $_POST["survey_tags"];
+  AddTag($tags,$row["survey_id"],"survey");
+?>
     <div class="row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-        <form class="form-horizontal">
+        <form action="/survey/create/content/" method="post" class="form-horizontal">
           <div class="form-group">
             <label for="survey_mcq_no" class="col-sm-2 control-label">MCQ(s)</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="survey_mcq_no" min="1" placeholder="4">
+              <input type="number" class="form-control" name="survey_mcq_no" id="survey_mcq_no" min="1" placeholder="4">
             </div>
           </div>
           <div class="form-group">
             <label for="survey_option_no" class="col-sm-2 control-label">Options per MCQ</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="survey_option_no" min="2" placeholder="4">
+              <input type="number" class="form-control" name="survey_option_no" id="survey_option_no" min="2" placeholder="4">
             </div>
           </div>
           <div class="form-group">
