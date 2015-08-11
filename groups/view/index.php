@@ -51,7 +51,7 @@
           </div>
         </nav>
 <?php
-  create_post($GID,$USERID);
+  CreatePost($GID,$USERID);
   add_group_user($GID);
 
   if(isset($_GET["f"]) && $_GET["f"]=="rep_group") {

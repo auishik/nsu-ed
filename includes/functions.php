@@ -1,5 +1,5 @@
 <?php
-  function create_post($group,$userid) {
+  function CreatePost($group,$userid) {
     if(isset($_POST["post_title"])) {
       $title= $_POST["post_title"];
       $body= $_POST["post_body"];
