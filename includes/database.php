@@ -10,7 +10,7 @@
 
   function query($query) {
     global $connect;
-    $result = mysqli_query($connect,$query) or die ("Error in query.");
+    $result = mysqli_query($connect,$query) or die(mysqli_error($connect));
     return $result;
   }
 
