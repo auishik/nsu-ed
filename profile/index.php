@@ -38,6 +38,12 @@
           </div>
         </nav>
 <?php
+  if(isset($_POST["ip"])) {
+    $new_ip= $_POST["ip"];
+
+    $query2="UPDATE user SET ip= '$new_ip' WHERE id= $USERID";
+    query($query2);
+  }
   if(isset($_POST["email"]) && isset($_POST["phone"])) {
     $new_email= $_POST["email"];
     $new_phone= $_POST["phone"];
@@ -58,7 +64,7 @@
 <?php
   }
 
-  $query= "SELECT n.first_name, n.last_name, u.email, u.phone, u.coins FROM nsu_sims n JOIN user u";
+  $query= "SELECT n.first_name, n.last_name, u.email, u.phone, u.coins, u.ip FROM nsu_sims n JOIN user u";
   $query .= " ON (n.id=u.id) WHERE n.id = $USERID";
   $result= query($query);
   $row= mysqli_fetch_array($result);
@@ -67,6 +73,7 @@
   $email= $row["email"];
   $phone= $row["phone"];
   $coins= $row["coins"];
+  $ip= $row["ip"];
 ?>
         <div class="col-lg-12"><!--content-->
           <div class="row avatar-form">
@@ -98,6 +105,12 @@
               <label class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" name="email" placeholder="<?php echo $email; ?>">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">IP address</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="ip" placeholder="<?php echo $row["ip"]; ?>">
               </div>
             </div>
             <div class="form-group">
