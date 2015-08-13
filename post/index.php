@@ -43,10 +43,10 @@
     $query .= " VALUES ('$body',0,0,$POSTID,$USERID)";
     query($query);
 ?>
-    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-      <h3 class="h1 text-center"><span class="glyphicon glyphicon-thumbs-up text-success"></span></h3>
-      <p class="text-info bg-info errata">Comment posted!</p>
-    </div><!--/.column-->
+    <div class="alert alert-success alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-thumbs-up glyphicon-pad"></span> Comment successfully added!
+    </div>
 <?php
   }
   if(isset($_GET["f"])) {
