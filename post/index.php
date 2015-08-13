@@ -55,9 +55,10 @@
       $query= "INSERT INTO report_post (post_id,reporter_id) VALUES ($POSTID,$USERID)";
       query($query);
 ?>
-    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-      <p class="text-info bg-info errata">Post reported!</p>
-    </div><!--/.column-->
+    <div class="alert alert-warning alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-info-sign glyphicon-pad"></span> Post successfully reported!
+    </div>
 <?php
     } elseif($_GET["f"]=="del_post") {
       //del_post function response
@@ -67,9 +68,10 @@
       $query= "DELETE FROM comment WHERE post_id= $POSTID";
       query($query);
 ?>
-    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-      <p class="text-info bg-info errata">Post deleted!</p>
-    </div><!--/.column-->
+    <div class="alert alert-danger alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-exclamation-sign glyphicon-pad"></span> Post successfully deleted!
+    </div>
 <?php
     } elseif($_GET["f"]=="up_post") {
       $query= "UPDATE post SET vote= vote+1 WHERE post_id= $POSTID";
@@ -91,9 +93,10 @@
       $query .= " VALUES ($cid,$USERID)";
       query($query);
 ?>
-    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-      <p class="text-info bg-info errata">Comment reported!</p>
-    </div><!--/.column-->
+    <div class="alert alert-warning alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-info-sign glyphicon-pad"></span> Comment successfully reported!
+    </div>
 <?php
     }
   }
@@ -177,7 +180,7 @@
                 <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a></h1>
               </span>
             </div>
-            <p class="comment-body"><?php echo $row["body"]; ?></p>
+            <p class="comment-body sm-margin-top"><?php echo $row["body"]; ?></p>
             <div class="comment-owner text-right">
               comment by <a href="/profile/view?id=<?php echo $row["id"]; ?>" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-question-sign"></span> <?php echo $row["username"]; ?></a>
             </div>
@@ -201,7 +204,7 @@
                 <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a></h1>
                 </span>
             </div>
-            <p class="comment-body"><?php echo $row["body"]; ?></p>
+            <p class="comment-body sm-margin-top"><?php echo $row["body"]; ?></p>
             <div class="comment-owner text-right">
               comment by <a href="/profile/view?id=<?php echo $row["id"]; ?>" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-question-sign"></span> <?php echo $row["username"]; ?></a>
             </div>
@@ -212,7 +215,7 @@
             <form action="index.php?id=<?php echo $POSTID; ?>" method="post">
               <div class="form-group">
                 <label for="comment_body">Body</label>
-                <textarea class="form-control" name="body" maxlength="140">Your comment</textarea>
+                <textarea class="form-control" name="body" rows="5" placeholder="Your comment"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
