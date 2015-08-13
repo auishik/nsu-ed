@@ -58,9 +58,10 @@
     $query= "INSERT INTO report_group VALUES (NULL,$GID,$USERID)";
     query($query);
 ?>
-      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-        <p class="text-info bg-info errata"><?php echo "Group reported."; ?></p>
-      </div><!--/.column-->
+      <div class="alert alert-warning alert-dismissible fade in">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <span class="glyphicon glyphicon-exclamation-sign glyphicon-pad"></span> Group successfully reported!
+    </div>
 <?php } ?>
         <div class="col-lg-12"><!--content-->
           <!--group pills-->
@@ -84,7 +85,7 @@
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
 ?>
-                <li href="#" class="list-group-item notify">
+                <li href="#" class="list-group-item">
                   <a href="/post/?id=<?php echo $row["post_id"]; ?>">
                     <h4 class="list-group-item-heading xs-margin-bottom"><?php echo $row["title"]; ?></h4>
                   </a>

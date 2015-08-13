@@ -38,7 +38,7 @@
 <?php require_once("../includes/breadcrumb.php"); ?>
 <?php
   if(isset($_POST["body"])) {
-    $body= $_POST["body"];
+    $body= escape($_POST["body"]);
     $query= "INSERT INTO comment (body,vote,is_best,post_id,commenter_id)";
     $query .= " VALUES ('$body',0,0,$POSTID,$USERID)";
     query($query);
@@ -98,6 +98,13 @@
       <span class="glyphicon glyphicon-info-sign glyphicon-pad"></span> Comment successfully reported!
     </div>
 <?php
+    } elseif($_GET["f"]=="best_comment") {
+      //best comment function
+      $cid= $_GET["cid"];
+      $query= "UPDATE comment SET is_best=1 WHERE comment_id= $cid";
+      query($query);
+      $query= "UPDATE post SET is_solved=1 WHERE post_id= $POSTID";
+      query($query);
     }
   }
 ?>
@@ -175,9 +182,10 @@
               <span class="badge"><?php echo $row["vote"]; ?></span>
               <span class="text-muted"> votes</span>
               <span class="pull-right clearfix">
-                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a></h1>
-                <a href="?id=<?php echo "$POSTID&f=down_comment&cid=$cid"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a></h1>
-                <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a></h1>
+                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> mark best</a>
+                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a>
+                <a href="?id=<?php echo "$POSTID&f=down_comment&cid=$cid"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a>
+                <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a>
               </span>
             </div>
             <p class="comment-body sm-margin-top"><?php echo $row["body"]; ?></p>
@@ -199,10 +207,11 @@
               <span class="badge"> <?php echo $row["vote"]; ?></span>
               <span class="text-muted"> votes</span>
               <span class="pull-right clearfix">
-                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a></h1>
-                <a href="?id=<?php echo "$POSTID&f=down_comment&cid=$cid"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a></h1>
-                <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a></h1>
-                </span>
+                <a href="?id=<?php echo "$POSTID&f=best_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span> mark best</a>
+                <a href="?id=<?php echo "$POSTID&f=up_comment&cid=$cid"; ?>" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> vote up</a>
+                <a href="?id=<?php echo "$POSTID&f=down_comment&cid=$cid"; ?>" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-thumbs-down"></span> vote down</a>
+                <a href="?id=<?php echo "$POSTID&f=rep_comment&cid=$cid"; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> report</a>
+              </span>
             </div>
             <p class="comment-body sm-margin-top"><?php echo $row["body"]; ?></p>
             <div class="comment-owner text-right">

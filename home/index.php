@@ -217,7 +217,7 @@
             <div class="tab-pane fade active in" id="groups_trending">
               <div class="list-group">
 <?php
-  $query= "SELECT group_id, group_name, is_private, owner_id FROM groups ORDER BY TIME LIMIT 10";
+  $query= "SELECT group_id, group_name, is_private, owner_id FROM groups WHERE group_id <> 0 ORDER BY TIME LIMIT 10";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
     $group_id= $row["group_id"];
