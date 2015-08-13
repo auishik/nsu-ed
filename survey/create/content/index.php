@@ -30,17 +30,39 @@
     $mcq_no= $_POST["survey_mcq_no"];
   if(isset($_POST["survey_option_no"]))
     $option_no= $_POST["survey_option_no"];
+  if(isset($_GET["id"]))
+    $survey_key= $_GET["id"];
 
   if(isset($_POST["questions"])) {
-    //questions array holding questions
-    //options array holding options
-    //INSERTion goes here
+    $questions= $_POST["questions"];
+    $options= $_POST["options"];
+    $m_no= $_GET["m"];
+    $o_no= $_GET["o"];
+
+    for($i=0;$i<$m_no;$i++) {
+      //insert Question
+      $q= $questions[$i];
+      $query= "INSERT INTO question VALUES (NULL,$survey_key,'$q')";
+      query($query);
+      $qid= GetDbId();
+      //insert Option
+      for($j=$i*$o_no;$j<$o_no*($i+1);$j++) {
+        $o= $options[$j];
+        $query= "INSERT INTO options VALUES (NULL,$qid,0,'$o')";
+        query($query);
+      }
+    }
+?>
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+        <p class="text-info bg-info errata">Survey created!</p>
+      </div><!--/.column-->
+<?php
   }
   else {
 ?>
     <div class="row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-        <form action="index.php" method="post" class="form-horizontal">
+        <form action="index.php?<?php echo "id=$survey_key&m=$mcq_no&o=$option_no";?>" method="post" class="form-horizontal">
           <!--question 1-->
 <?php
     for($i=1;$i<=$mcq_no;$i++) {

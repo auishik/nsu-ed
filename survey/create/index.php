@@ -34,17 +34,15 @@
 
   $query= "INSERT INTO survey VALUES (NULL,'$title','$body',$USERID,$time,0)";
   query($query);
+  $survey_key= GetDbId();
 
   //tag processor
-  $query= "SELECT survey_id FROM survey WHERE time= $time"; //getting id of last added survey
-  $result= query($query);
-  $row= mysqli_fetch_array($result);
   $tags= $_POST["survey_tags"];
-  AddTag($tags,$row["survey_id"],"survey");
+  AddTag($tags,$survey_key,"survey");
 ?>
     <div class="row clearfix">
       <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-        <form action="/survey/create/content/" method="post" class="form-horizontal">
+        <form action="/survey/create/content/?id=<?php echo $survey_key; ?>" method="post" class="form-horizontal">
           <div class="form-group">
             <label for="survey_mcq_no" class="col-sm-2 control-label">MCQ(s)</label>
             <div class="col-sm-10">

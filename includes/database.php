@@ -14,6 +14,11 @@
     return $result;
   }
 
+  function GetDbId() {
+    global $connect;
+    return mysqli_insert_id($connect);
+  }
+
   function CloseDb() {
     global $connect;
     mysqli_close($connect);
