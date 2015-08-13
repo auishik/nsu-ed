@@ -220,9 +220,10 @@
   $query= "SELECT group_id, group_name, is_private, owner_id FROM groups ORDER BY TIME LIMIT 10";
   $result= query($query);
   while($row= mysqli_fetch_array($result)) {
+    $group_id= $row["group_id"];
 ?>
                 <li href="#" class="list-group-item">
-                  <a href="#">
+                  <a href="/groups/view/?id=<?php echo $group_id; ?>">
                     <h4 class="list-group-item-heading xs-margin-bottom"><?php echo $row["group_name"]; ?></h4>
                   </a>
                   <div class="list-group-item-text list-buttons">
@@ -327,9 +328,14 @@
           <div class="tab-content xs-margin-top">
             <div class="tab-pane fade active in" id="surveys_recent">
               <div class="list-group">
+<?php
+  $query= "SELECT survey_id, survey_name, owner_id FROM survey ORDER BY TIME DESC LIMIT 10";
+  $result= query($query);
+  while($row= mysqli_fetch_array($result)) {
+?>
                 <li href="#" class="list-group-item">
                   <a href="#">
-                    <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
+                    <h4 class="list-group-item-heading xs-margin-bottom"><?php echo $row["survey_name"]; ?></h4>
                   </a>
                   <div class="list-group-item-text">
                     <div class="btn-group btn-group-sm btn-group-xs-in">
@@ -346,6 +352,7 @@
                     <a href="#" class="btn btn-info btn-sm btn-xs-in"><span class="glyphicon glyphicon-tags glyphicon-pad"></span> normalize</a>
                   </div>
                 </li>
+<?php } ?>
                 <li href="#" class="list-group-item">
                   <a href="#">
                     <h4 class="list-group-item-heading xs-margin-bottom">How do I activate my account?</h4>
