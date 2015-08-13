@@ -65,8 +65,8 @@
 
   function CreateGroup($user) {
     if(isset($_POST["group_title"])) {
-      $title= $_POST["group_title"];
-      $body= $_POST["group_body"];
+      $title= escape($_POST["group_title"]);
+      $body= escape($_POST["group_body"]);
       if(isset($_POST["group_private"])) $is_private= 1;
       else $is_private= 0;
       $time= time();
@@ -76,7 +76,7 @@
       query($query);
 
       //tag processor
-      $tags= $_POST["group_tags"];
+      $tags= escape($_POST["group_tags"]);
       if(!empty($tags)) {
         $query= "SELECT group_id FROM groups WHERE time= $time"; //getting id of last added post
         $result= query($query);
