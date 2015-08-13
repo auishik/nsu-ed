@@ -19,6 +19,11 @@
     return mysqli_insert_id($connect);
   }
 
+  function escape($str) {
+    global $connect;
+    return mysqli_real_escape_string($connect,$str);
+  }
+
   function CloseDb() {
     global $connect;
     mysqli_close($connect);

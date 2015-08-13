@@ -1,8 +1,8 @@
 <?php
   function CreatePost($group,$userid) {
     if(isset($_POST["post_title"])) {
-      $title= $_POST["post_title"];
-      $body= $_POST["post_body"];
+      $title= escape($_POST["post_title"]);
+      $body= escape($_POST["post_body"]);
       $time= time();
 
       $query= "INSERT INTO post (title,body,vote,is_solved,group_id,poster_id,time)";
