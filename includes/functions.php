@@ -10,11 +10,13 @@
       query($query);
 
       //tag processor
-      $query= "SELECT post_id FROM post WHERE time= $time"; //getting id of last added post
-      $result= query($query);
-      $row= mysqli_fetch_array($result);
       $tags= $_POST["post_tags"];
-      AddTag($tags,$row["post_id"],"post");
+      if(!empty($tags)) {
+        $query= "SELECT post_id FROM post WHERE time= $time"; //getting id of last added post
+        $result= query($query);
+        $row= mysqli_fetch_array($result);
+        AddTag($tags,$row["post_id"],"post");
+      }
 ?>
       <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
         <p class="text-info bg-info errata">Post created!</p>
@@ -71,11 +73,14 @@
       query($query);
 
       //tag processor
-      $query= "SELECT group_id FROM groups WHERE time= $time"; //getting id of last added post
-      $result= query($query);
-      $row= mysqli_fetch_array($result);
       $tags= $_POST["group_tags"];
-      AddTag($tags,$row["post_id"],"group");
+      if(!empty($tags)) {
+        $query= "SELECT group_id FROM groups WHERE time= $time"; //getting id of last added post
+        $result= query($query);
+        $row= mysqli_fetch_array($result);
+        AddTag($tags,$row["post_id"],"group");
+      }
+
 ?>
     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
       <p class="text-info bg-info errata">Group created!</p>
