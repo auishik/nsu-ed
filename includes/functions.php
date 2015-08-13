@@ -62,8 +62,8 @@
 
   function CreateGroup($user) {
     if(isset($_POST["group_title"])) {
-      $title= $_POST["group_title"];
-      $body= $_POST["group_body"];
+      $title= escape($_POST["group_title"]);
+      $body= escape($_POST["group_body"]);
       if(isset($_POST["group_private"])) $is_private= 1;
       else $is_private= 0;
       $time= time();
