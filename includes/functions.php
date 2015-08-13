@@ -81,7 +81,7 @@
         $query= "SELECT group_id FROM groups WHERE time= $time"; //getting id of last added post
         $result= query($query);
         $row= mysqli_fetch_array($result);
-        AddTag($tags,$row["post_id"],"group");
+        AddTag($tags,$row["group_id"],"group");
       }
 
 ?>
