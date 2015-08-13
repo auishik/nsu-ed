@@ -18,9 +18,10 @@
         AddTag($tags,$row["post_id"],"post");
       }
 ?>
-      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-        <p class="text-info bg-info errata">Post created!</p>
-      </div><!--/.column-->
+    <div class="alert alert-success alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-ok glyphicon-pad"></span> Post successfully created!
+    </div>
 <?php
     }
   }
@@ -35,9 +36,10 @@
       $query= "INSERT INTO group_member VALUES ($userid,$group)";
       query($query);
 ?>
-      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-        <p class="text-info bg-info errata"><?php echo $add_user . " added to the group."; ?></p>
-      </div><!--/.column-->
+    <div class="alert alert-success alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-ok glyphicon-pad"></span> Group user successfully created!
+    </div>
 <?php
     }
   }
@@ -54,16 +56,17 @@
       query($query);
     }
 ?>
-      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-        <p class="text-info bg-info errata"><?php echo "Group info updated!"; ?></p>
-      </div><!--/.column-->
+    <div class="alert alert-success alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-ok glyphicon-pad"></span> Group successfully updated!
+    </div>
 <?php
   }
 
   function CreateGroup($user) {
     if(isset($_POST["group_title"])) {
-      $title= escape($_POST["group_title"]);
-      $body= escape($_POST["group_body"]);
+      $title= $_POST["group_title"];
+      $body= $_POST["group_body"];
       if(isset($_POST["group_private"])) $is_private= 1;
       else $is_private= 0;
       $time= time();
@@ -82,9 +85,10 @@
       }
 
 ?>
-    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-      <p class="text-info bg-info errata">Group created!</p>
-    </div><!--/.column-->
+    <div class="alert alert-success alert-dismissible fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <span class="glyphicon glyphicon-ok glyphicon-pad"></span> Group successfully created!
+    </div>
 <?php
     }
   }
