@@ -1,6 +1,6 @@
 <?php
-  $ROOT= $_SERVER['DOCUMENT_ROOT'];
-  require_once("$ROOT/includes/head.php");
+  require_once("/includes/head.php");
+  if(isset($_GET['f']) && $_GET['f']=="logout") $_SESSION['username']= NULL;
   //session_start();
 ?>
 
@@ -103,7 +103,7 @@
   			<div class="tab-content tab-bordered">
   				<div class="tab-pane fade active in" id="sign_in">
 <?php
-  if(isset($_POST["username"]) && isset($_POST["password"])) {
+  if(isset($_POST["submit"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -121,6 +121,8 @@
 <?php
     }
   }
+?>
+<?php
   if(isset($_GET['id']))
     if($_GET['id']==1) {
 ?>
@@ -136,7 +138,7 @@
     						<label for="password">Password</label>
     						<input type="password" class="form-control" id="password" name = "password" placeholder="password">
   						</div>
-  						<button type="submit" class="btn btn-primary">Submit</button>
+  						<button type="submit" name="submit" class="btn btn-primary">Submit</button>
   					</form>
   					<p class="bg-info errata sm-margin-top"><span class="glyphicon glyphicon-question-sign glyphicon-pad text-danger"></span> <a href="/checkpoint/<?php echo rawurlencode("account recovery.php"); ?>">Forgot your password?</a> </p>
   				</div><!--#sign_in-->

@@ -74,7 +74,7 @@
             </li>
             <li role="separator" class="divider"></li>
             <li>
-              <a href="/"><?php $_SESSION["username"] = NULL; ?><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
+              <a href="/?f=logout"><span class="glyphicon glyphicon-off glyphicon-pad"></span> logout</a>
             </li>
           </ul><!--dropdown-menu-->
         </li><!--/.dropdown-->
